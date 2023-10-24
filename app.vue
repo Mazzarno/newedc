@@ -1,13 +1,15 @@
 <template>
   <div class="select-none">
-    <Loading v-if="loading" />
-    <NuxtLayout>
+    <Loading v-show="loading" />
+    <NuxtLayout v-show="loading == false">
       <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
+import AOS from "aos";
+onMounted(() => AOS.init());
 const nuxtApp = useNuxtApp();
 const loading = ref(true);
 nuxtApp.hook("page:start", () => {

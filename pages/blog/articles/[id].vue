@@ -4,7 +4,7 @@
     <div class="container px-5 pt-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
         <h1 class="sm:text-4xl text-3xl font-medium title-font text-primary">
-          {{ articles[$route.params.id - 1].Titre }}
+          {{ articles[$route.params.id - 1].Titre }} {{ id }}
         </h1>
       </div>
     </div>
@@ -103,19 +103,20 @@ import moment from "moment";
 import "moment/dist/locale/fr";
 const renderer = md();
 const nuxtApp = useNuxtApp();
+const api_url = "https://echappee-copro.fr";
+const yt_api = "https://www.youtube.com/embed/";
 const articles = await $fetch("https://echappee-copro.fr/articles").catch(
   (error) => error.data
 );
+
+useSeoMeta({
+  title: () => articles[useRoute().params.id - 1].Titre,
+  description: () => articles[useRoute().params.id - 1].Description,
+  ogDescription: () => articles[useRoute().params.id - 1].Description,
+  ogImage: () =>
+    api_url + articles[useRoute().params.id - 1].Media_contenu[0].url,
+});
 </script>
 
-<script>
-export default {
-  data() {
-    return {
-      yt_api: "https://www.youtube.com/embed/",
-      api_url: "https://echappee-copro.fr",
-    };
-  },
-};
-</script>
+
 

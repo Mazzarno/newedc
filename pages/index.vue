@@ -6,7 +6,7 @@
       <img src="~/assets/img/banniere-header.jpg" alt="" srcset="" />
     </section>
     <!-- PRESENTATION -->
-    <section class="">
+    <section>
       <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div class="max-w-screen-md">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-primary">
@@ -43,12 +43,13 @@
       <div
         class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6 justify-items-center md:justify-items-start"
       >
-        <img
-          class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last"
-          src="~/assets/img/totem1.jpg"
-          alt="dashboard image"
-        />
-
+        <div class="w-full">
+          <img
+            class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last"
+            src="~/assets/img/totem1.jpg"
+            alt="dashboard image"
+          />
+        </div>
         <div class="mt-4 md:mt-0 order-first md:order-last">
           <h2 class="mb-4 text-2xl tracking-tight font-extrabold text-primary">
             À l’échelle d’une Copropriété
