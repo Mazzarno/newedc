@@ -8,8 +8,6 @@
 </template>
 
 <script setup lang="ts">
-import AOS from "aos";
-onMounted(() => AOS.init());
 const nuxtApp = useNuxtApp();
 const loading = ref(true);
 nuxtApp.hook("page:start", () => {
