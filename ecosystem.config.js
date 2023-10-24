@@ -4,7 +4,7 @@ module.exports = {
       name: "newedc",
       exec_mode: "cluster",
       instances: "max", // Ou un certain nombre d'instances
-      script: "./node_modules/nuxt/bin/nuxt.js",
+      script: ".output/server/index.mjs",
       args: "start",
     },
   ],
