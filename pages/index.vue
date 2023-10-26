@@ -120,13 +120,15 @@
             <div
               class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden object-cover self-center shadow-xl transition delay-100 hover:shadow-2xl duration-300"
             >
-              <img
-                class="w-full object-cover object-center block"
-                :src="
-                  'https://echappee-copro.fr' + article.Media_contenu[0].url
-                "
-                alt="blog"
-              />
+              <NuxtLink nuxt-link :to="`/blog/articles/${article.id}`">
+                <img
+                  class="w-full object-cover object-center block"
+                  :src="
+                    'https://echappee-copro.fr' + article.Media_contenu[0].url
+                  "
+                  alt="blog"
+                />
+              </NuxtLink>
               <div class="p-6">
                 <div>
                   <nuxt-link

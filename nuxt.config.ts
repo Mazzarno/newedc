@@ -2,7 +2,9 @@
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "nuxt-swiper"],
   vite: { ssr: { noExternal: ["moment"] } },
-// nitro: { preset: "netlify" },
+  nitro: {preset: "netlify", },
+  // nitro: { preset: "node" },
+  // nitro: { preset: "node-cluster" },
   swiper: {
     prefix: "Swiper",
     styleLang: "css",

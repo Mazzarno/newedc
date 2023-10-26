@@ -1,11 +1,11 @@
 module.exports = {
   apps: [
     {
-      name: "newedc",
-      exec_mode: "cluster",
-      instances: "max", // Ou un certain nombre d'instances
-      script: ".output/server/index.mjs",
-      args: "start",
+      name: "edcXmazzar",
+      port: "3000",
+      exec_mode: "node",
+      instances: "max",
+      script: "./.output/server/index.mjs",
     },
   ],
 };
