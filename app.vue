@@ -1,9 +1,7 @@
 <template>
   <div class="select-none">
     <Loading v-show="loading" />
-    <NuxtLayout v-show="loading == false">
-      <NuxtPage />
-    </NuxtLayout>
+    <NuxtLayout> </NuxtLayout>
   </div>
 </template>
 

@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="relative">
     <!-- NAVBARZ -->
     <nav
-      id="navigation"
-      class="bg-primary w-full fixed z-50 drop-shadow-xl hover:drop-shadow-2xl transition-all duration-500"
+      class="header fixed inset-x-0 bg-primary w-full drop-shadow-xl"
+      :class="{ 'is-hidden': !showHeader }"
     >
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -222,8 +222,8 @@
         </ul>
       </div>
     </div>
-    <main>
-      <slot />
+    <main class="relative z-0">
+      <NuxtPage />
     </main>
     <!-- FOOTER -->
     <footer class="p-4 bg-primary sm:p-6">
@@ -368,21 +368,46 @@ onMounted(() => {
   initModals();
   initPopovers();
   initTabs();
-  initTooltips();
-  const isVisible = ref(false);
-  const toggleVisibility = () => {
-    isVisible.value = !isVisible.value;
-  };
-  let prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    const currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos || isVisible.value) {
-      document.getElementById("navigation").style.top = "0";
-    } else {
-      document.getElementById("navigation").style.top = "-128px";
-      // isVisible.value = false;
-    }
-    prevScrollpos = currentScrollPos;
-  };
 });
 </script>
+<script>
+export default {
+  data: () => ({
+    showHeader: true,
+    lastScrollPosition: 0,
+    scrollOffset: 40,
+  }),
+  mounted() {
+    this.lastScrollPosition = window.pageYOffset;
+    window.addEventListener("scroll", this.onScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll);
+  },
+  methods: {
+    onScroll() {
+      if (window.pageYOffset < 0) {
+        return;
+      }
+      if (
+        Math.abs(window.pageYOffset - this.lastScrollPosition) <
+        this.scrollOffset
+      ) {
+        return;
+      }
+      this.showHeader = window.pageYOffset < this.lastScrollPosition;
+      this.lastScrollPosition = window.pageYOffset;
+    },
+  },
+};
+</script>
+<style scoped>
+.header {
+  transform: translateY(0);
+  transition: transform 300ms linear;
+}
+
+.header.is-hidden {
+  transform: translateY(-100%);
+}
+</style>

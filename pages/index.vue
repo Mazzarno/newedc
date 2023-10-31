@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- HEADER -->
-    <div class="bg-primary md:pt-24 pt-32"></div>
-    <section class="header">
+
+    <section class="z-0">
       <img src="~/assets/img/banniere-header.jpg" alt="" srcset="" />
     </section>
     <!-- PRESENTATION -->
@@ -279,4 +279,3 @@ export default {
   },
 };
 </script>
-

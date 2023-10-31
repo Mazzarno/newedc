@@ -1,8 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "nuxt-swiper"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-swiper", "nuxt-simple-robots","nuxt-simple-sitemap","nuxt-schema-org",],
   vite: { ssr: { noExternal: ["moment"] } },
-  nitro: {preset: "netlify", },
+  nitro: {
+    preset: "netlify",
+prerender: {
+      crawlLinks: true,
+    }  },
+  // nitro: { preset: "netlify-edge" },
   // nitro: { preset: "node" },
   // nitro: { preset: "node-cluster" },
   swiper: {
