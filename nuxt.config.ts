@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "nuxt-swiper", "nuxt-simple-robots","nuxt-simple-sitemap","nuxt-schema-org",],
   vite: { ssr: { noExternal: ["moment"] } },
   nitro: {
-    preset: "netlify",
+    preset: "netlify-edge",
 prerender: {
       crawlLinks: true,
     }  },
