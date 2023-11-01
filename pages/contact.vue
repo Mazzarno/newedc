@@ -1,6 +1,5 @@
 <template>
   <section class="text-gray-600 body-font relative z-0">
-    <div class="bg-primary md:pt-32 pt-32"></div>
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
         <h1
@@ -173,7 +172,4 @@ export default {
 };
 </script>
 
-
-
-<style>
-</style>
+<style></style>

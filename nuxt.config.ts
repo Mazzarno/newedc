@@ -2,12 +2,7 @@
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "nuxt-swiper", "nuxt-simple-robots","nuxt-simple-sitemap","nuxt-schema-org",],
   vite: { ssr: { noExternal: ["moment"] } },
-  nitro: {
-    preset: "netlify-edge",
-prerender: {
-      crawlLinks: true,
-    }  },
-  // nitro: { preset: "netlify-edge" },
+   nitro: { preset: "netlify-edge" },
   // nitro: { preset: "node" },
   // nitro: { preset: "node-cluster" },
   swiper: {
@@ -16,7 +11,12 @@ prerender: {
   },
   devtools: { enabled: true },
   css: ["~/assets/css/styles.css", "@mdi/font/css/materialdesignicons.min.css"],
+   site: {
+    url: "https://echappee-copro.org/",
+    name: "L'Échappée des copropriétés",
+  },
   app: {
+    pageTransition: { name: "page", mode: "out-in" },
     head: {
       titleTemplate: "L'Échappée des copropriétés - %s",
       htmlAttrs: {

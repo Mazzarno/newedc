@@ -1,8 +1,10 @@
 # Nuxt dev/build outputs
 .output
 .nuxt
+.netlify
 .nitro
 .cache
+.vscode
 dist
 
 # Node dependencies

@@ -1,6 +1,5 @@
 <template>
-  <div class="">
-    <div class="bg-primary md:pt-32 pt-32"></div>
+  <div>
     <div class="container px-5 pt-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
         <h1 class="sm:text-4xl text-3xl font-medium title-font text-primary">
@@ -117,6 +116,3 @@ useSeoMeta({
     api_url + articles[useRoute().params.id - 1].Media_contenu[0].url,
 });
 </script>
-
-
-
