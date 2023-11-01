@@ -44,6 +44,7 @@
       >
         <div class="w-full">
           <img
+            loading="lazy"
             class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last"
             src="~/assets/img/totem1.jpg"
             alt="dashboard image"
@@ -119,9 +120,13 @@
             <div
               class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden object-cover self-center shadow-xl transition delay-100 hover:shadow-2xl duration-300"
             >
-              <NuxtLink nuxt-link :to="`/blog/articles/${article.id}`">
+              <NuxtLink
+                class="group"
+                nuxt-link
+                :to="`/blog/articles/${article.id}`"
+              >
                 <img
-                  class="w-full object-cover object-center block"
+                  class="w-full object-cover object-center transition duration-200 group-hover:scale-110"
                   :src="
                     'https://echappee-copro.fr' + article.Media_contenu[0].url
                   "
@@ -211,8 +216,9 @@
             <div
               class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden object-cover self-center shadow-xl transition delay-100 hover:shadow-2xl duration-300"
             >
-              <div class="video-responsive">
+              <div class="video-responsive group">
                 <iframe
+                  class="object-cover object-center transition duration-200 group-hover:scale-110"
                   defer
                   :src="yt_api + video.URL"
                   frameborder="0"

@@ -3,7 +3,11 @@
     <!-- NAVBARZ -->
     <nav
       class="header top-0 fixed z-50 opacity-100 bg-primary w-full drop-shadow-xl"
-      :class="{ 'is-hidden': !showHeader }"
+      :class="
+        { 'is-hidden': !showHeader } && open
+          ? 'bg-grey-900 opacity-25'
+          : 'opacity-100'
+      "
     >
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -27,9 +31,7 @@
         <button
           type="button"
           class="inline-flex items-center p-2 transition hover:scale-110 duration-300 hover:pulse text-white xl:hidden"
-          data-drawer-target="drawer-navigation"
-          data-drawer-toggle="drawer-navigation"
-          aria-controls="drawer-navigation"
+          @click="drawer()"
         >
           <svg
             class="w-8 h-8"
@@ -112,10 +114,8 @@
     </nav>
     <!-- DRAWER -->
     <div
-      id="drawer-navigation"
-      class="fixed top-0 left-0 z-50 drop-shadow-xl hover:drop-shadow-2xl h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-primary w-80"
-      tabindex="-1"
-      aria-labelledby="drawer-navigation-label"
+      :class="open ? 'navbar-open' : 'navbar-close'"
+      class="navbar z-50 w-80 absolute overflow-x-scroll bg-gray-700 top-0 h-screen transition-transform -translate-x-full bg-primary"
     >
       <h5
         id="drawer-navigation-label"
@@ -125,8 +125,7 @@
       </h5>
       <button
         type="button"
-        data-drawer-hide="drawer-navigation"
-        aria-controls="drawer-navigation"
+        @click="drawer()"
         class="text-white bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
       >
         <svg
@@ -220,12 +219,15 @@
         </ul>
       </div>
     </div>
-    <main>
+    <main :class="open ? 'bg-grey-900 opacity-25' : 'opacity-100'">
       <div class="pt-32 bg-primary"></div>
       <NuxtPage />
     </main>
     <!-- FOOTER -->
-    <footer class="p-4 bg-primary">
+    <footer
+      class="p-4 bg-primary"
+      :class="open ? 'bg-grey-900 opacity-25' : 'opacity-100'"
+    >
       <div
         class="container px-5 py-4 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
       >
@@ -403,6 +405,7 @@ export default {
     showHeader: true,
     lastScrollPosition: 0,
     scrollOffset: 128,
+    open: false,
   }),
   mounted() {
     this.lastScrollPosition = window.pageYOffset;
@@ -412,6 +415,9 @@ export default {
     window.removeEventListener("scroll", this.onScroll);
   },
   methods: {
+    drawer() {
+      this.open = !this.open;
+    },
     onScroll() {
       if (window.pageYOffset < 0) {
         return;
@@ -436,5 +442,15 @@ export default {
 
 .header.is-hidden {
   transform: translateY(-100%);
+}
+.navbar {
+  transition: all 330ms ease-out;
+}
+
+.navbar-open {
+  transform: translateX(0%);
+}
+.navbar-close {
+  transform: translateX(-100%);
 }
 </style>
