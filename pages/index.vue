@@ -1,9 +1,8 @@
 <template>
   <div>
     <!-- HEADER -->
-
-    <section class="z-0">
-      <img src="~/assets/img/banniere-header.jpg" alt="" srcset="" />
+    <section class="relative z-0">
+      <img cla src="~/assets/img/banniere-header.jpg" alt="" srcset="" />
     </section>
     <!-- PRESENTATION -->
     <section>

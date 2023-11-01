@@ -1,8 +1,8 @@
 <template>
-  <div class="relative">
+  <div>
     <!-- NAVBARZ -->
     <nav
-      class="header fixed inset-x-0 bg-primary w-full drop-shadow-xl"
+      class="header top-0 fixed z-50 opacity-100 bg-primary w-full drop-shadow-xl"
       :class="{ 'is-hidden': !showHeader }"
     >
       <div
@@ -19,9 +19,7 @@
           />
         </NuxtLink>
         <div>
-          <h1
-            class="text-white text-lg font-bold uppercase hidden max-sm:block md:block"
-          >
+          <h1 class="text-white text-lg font-bold uppercase hidden lg:block">
             Faciliter les projets collectifs en copropriété.
           </h1>
         </div>
@@ -222,120 +220,149 @@
         </ul>
       </div>
     </div>
-    <main class="relative z-0">
+    <main>
+      <div class="pt-32 bg-primary"></div>
       <NuxtPage />
     </main>
     <!-- FOOTER -->
-    <footer class="p-4 bg-primary sm:p-6">
-      <div class="mx-auto max-w-screen-xl">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-            <NuxtLink to="/" class="flex items-center">
-              <img
-                src="~\assets\img\logo-nav.png"
-                class="h-24 mr-3"
-                alt="L'échappée des copropriétés logo"
-              />
-            </NuxtLink>
+    <footer class="p-4 bg-primary">
+      <div
+        class="container px-5 py-4 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      >
+        <div
+          class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left"
+        >
+          <NuxtLink
+            to="/"
+            class="flex items-center md:justify-start justify-center transition delay-100 hover:scale-105 duration-300"
+          >
+            <img
+              src="~\assets\img\logo-nav.png"
+              class="h-24 mr-3"
+              alt="L'échappée des copropriétés logo"
+            />
+          </NuxtLink>
+        </div>
+        <div
+          class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center"
+        >
+          <div class="lg:w-1/2 md:w-1/2 w-full px-4">
+            <h2
+              class="title-font font-medium text-white tracking-widest text-sm mb-3 underline"
+            >
+              PAGES
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <NuxtLink
+                  to="/"
+                  class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
+                  >Accueil</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  to="/blog"
+                  class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
+                  >Blog</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  to="/videotheque"
+                  class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
+                  >Vidéothèque</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  to="/contact"
+                  class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
+                  >Contact</NuxtLink
+                >
+              </li>
+            </nav>
           </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <ul class="text-white pt-6">
-                <li class="mb-4">
-                  <NuxtLink
-                    to="/"
-                    class="hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                    >Accueil</NuxtLink
-                  >
-                </li>
-                <li>
-                  <NuxtLink
-                    to="/blog"
-                    class="hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                    >Blog</NuxtLink
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul class="text-white pt-6">
-                <li class="mb-4">
-                  <NuxtLink
-                    to="/videotheque"
-                    class="hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                    >Vidéothèque</NuxtLink
-                  >
-                </li>
-                <li>
-                  <NuxtLink
-                    to="/contact"
-                    class="hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                    >Nous contactez</NuxtLink
-                  >
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul class="text-white pt-6">
-                <li class="mb-4">
-                  <NuxtLink
-                    to="/plan"
-                    class="hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                    >Plan du site</NuxtLink
-                  >
-                </li>
-                <li>
-                  <NuxtLink
-                    to="/plan"
-                    class="hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                  ></NuxtLink>
-                  <NuxtLink to="/mentions_legales">Mentions Légales</NuxtLink>
-                </li>
-              </ul>
-            </div>
+          <div class="lg:w-1/2 md:w-1/2 w-full px-4">
+            <h2
+              class="title-font font-medium text-white tracking-widest text-sm mb-3 underline"
+            >
+              SITEWEB
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <NuxtLink
+                  to="/plan"
+                  class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
+                  >Plan du site</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  to="/mentions_legales"
+                  class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
+                  >Mentions Légales</NuxtLink
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.echappee-copro.org/sitemap.xml"
+                  class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
+                  >Sitemap</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.echappee-copro.org/robots.txt"
+                  class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
+                  >Robots</a
+                >
+              </li>
+            </nav>
           </div>
         </div>
-        <hr class="my-6 border-white sm:mx-auto lg:my-8" />
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-white sm:text-center"
-            >{{ new Date().getFullYear() }} ~ L'ÉCHAPPÉE DES COPROPRIÉTÉS
-          </span>
-          <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <ul
-              class="flex flex-col mt-4 2xl:flex-row 2xl:mt-0 2xl:border-0 2xl:bg-transparent"
+      </div>
+      <hr class="border-white sm:mx-auto" />
+      <div class="bg-primary pt-4">
+        <div
+          class="bg-primary container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <p class="text-white text-sm text-center sm:text-left">
+            © {{ new Date().getFullYear() }} ~ L'ÉCHAPPÉE DES COPROPRIÉTÉS —
+            <a
+              href="https://mazzar.fr"
+              rel="noopener noreferrer"
+              class="text-white ml-1 hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
+              target="_blank"
+              >@MazzaR</a
             >
-              <li>
-                <a
-                  class="block py-2 px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
-                  href="https://www.linkedin.com/company/l-echappee-des-coproprietes?trk=public_profile_topcard_current_company"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span class="mdi mdi-24px mdi-linkedin"> </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="block py-2 px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
-                  href="https://www.facebook.com/manon.leroy.7355"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span class="mdi mdi-24px mdi-facebook"> </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="block py-2 px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
-                  href="https://www.youtube.com/channel/UCWxYK7EayDD5lYdjLSNW-lw"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span class="mdi mdi-24px mdi-youtube"> </span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          </p>
+          <span class="inline-flex sm:ml-auto justify-center sm:justify-start">
+            <a
+              class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
+              href="https://www.linkedin.com/company/l-echappee-des-coproprietes?trk=public_profile_topcard_current_company"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="mdi mdi-24px mdi-linkedin"> </span>
+            </a>
+            <a
+              class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
+              href="https://www.facebook.com/manon.leroy.7355"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="mdi mdi-24px mdi-facebook"> </span>
+            </a>
+            <a
+              class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
+              href="https://www.youtube.com/channel/UCWxYK7EayDD5lYdjLSNW-lw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="mdi mdi-24px mdi-youtube"> </span>
+            </a>
+          </span>
         </div>
       </div>
     </footer>
@@ -375,7 +402,7 @@ export default {
   data: () => ({
     showHeader: true,
     lastScrollPosition: 0,
-    scrollOffset: 40,
+    scrollOffset: 128,
   }),
   mounted() {
     this.lastScrollPosition = window.pageYOffset;
