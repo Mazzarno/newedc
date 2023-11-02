@@ -426,7 +426,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-y: none;
+  overflow-y: hidden;
   overflow: hidden;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;

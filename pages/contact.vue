@@ -115,10 +115,8 @@
             class="p-2 w-full pt-4 mt-8 border-t border-gray-200 text-center"
           >
             <p class="leading-normal my-5">Toulouse - 31000</p>
-            <span class="inline-flex">
-              <ul
-                class="flex flex-col mt-4 2xl:flex-row 2xl:mt-0 2xl:border-0 2xl:bg-transparent"
-              >
+            <span>
+              <ul class="inline-flex justify-center mt-4">
                 <li>
                   <a
                     class="block py-2 px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-primary text-lg"

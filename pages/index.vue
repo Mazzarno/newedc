@@ -147,21 +147,35 @@
                   >
                     {{ article.Description }}
                   </p>
-                  <div class="inline-flex items-center mb-3">
-                    <p class="space-x-3">
-                      <small class="italic"
-                        >Publié le
-                        {{
-                          moment(article.Publication).locale("fr").format("LL")
-                        }}</small
-                      ><small class="italic">Ecrit par : </small>
-                    </p>
-                    <span class="flex-grow flex flex-col pl-2">
-                      <span class="text-gray-900 leading-relaxed italic">{{
+                </div>
+                <div class="mt-auto flex items-end justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100"
+                    >
+                      <img
+                        :src="
+                          'https://echappee-copro.fr' + article.Avatar[0].url
+                        "
+                        loading="lazy"
+                        :alt="article.Auteur"
+                        class="h-full w-full object-cover object-center"
+                      />
+                    </div>
+
+                    <div>
+                      <span class="block text-primary">{{
                         article.Auteur
                       }}</span>
-                    </span>
+                      <span class="block text-sm text-gray-400">{{
+                        moment(article.Publication).locale("fr").format("LL")
+                      }}</span>
+                    </div>
                   </div>
+
+                  <span class="rounded border px-2 py-1 text-sm text-gray-500"
+                    >Article</span
+                  >
                 </div>
                 <div class="flex justify-self-end flex-wrap">
                   <NuxtLink
