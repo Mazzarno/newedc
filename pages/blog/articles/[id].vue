@@ -40,7 +40,7 @@
             <div>
               <img
                 alt="content"
-                class="object-cover object-center mx-auto rounded"
+                class="object-cover object-center mx-auto w-full rounded shadow-lg"
                 :src="
                   api_url + articles[$route.params.id - 1].Media_contenu2[0].url
                 "
