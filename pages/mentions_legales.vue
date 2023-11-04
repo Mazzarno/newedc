@@ -37,8 +37,7 @@
           Hébergerment du site web
         </h1>
         <p class="mb-4 font-light text-gray-900 sm:text-xl">
-          PLANETHOSTER inc. 4416 Louis B. Mayer, Laval (Québec) H7P 0G1, Canada,
-          FR
+          PLANETHOSTER inc. 4416 Louis B. Mayer, Laval (Québec) H7P 0G1, Canada
         </p>
         <p class="mb-4 font-light text-gray-900 sm:text-xl">
           (Nº Vert): 0 805 080 426 www.planethoster.com
@@ -48,7 +47,9 @@
         </h1>
         <p class="mb-4 font-light text-gray-900 sm:text-xl">Alexis GERMAIN</p>
 
-        <p class="mb-4 font-light text-gray-900 sm:text-xl">Vue.js & Nuxt</p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Tech : Vue.js & Nuxt
+        </p>
         <h1 class="text-xl tracking-tight bold text-primary sm:text-2xl">
           Termes d'utilisation
         </h1>

@@ -61,7 +61,7 @@ const videos = await $fetch("https://echappee-copro.fr/videos").catch(
 export default {
   data() {
     return {
-      yt_api: "https://www.youtube.com/embed/",
+      yt_api: "https://www.youtube-nocookie.com/embed/",
       youtube_api: "https://www.youtube.com/watch?v=",
     };
   },

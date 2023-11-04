@@ -232,7 +232,7 @@
                 <iframe
                   class="object-cover object-center transition duration-200 group-hover:scale-110"
                   defer
-                  :src="yt_api + video.URL"
+                  :src="yt_api + video.URL + yt_nocookie"
                   frameborder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
@@ -290,7 +290,8 @@ useHead({
 export default {
   data() {
     return {
-      yt_api: "https://www.youtube.com/embed/",
+      yt_api: "https://www.youtube-nocookie.com/embed/",
+      yt_nocookie: "?enablejsapi=1",
       youtube_api: "https://www.youtube.com/watch?v=",
     };
   },
