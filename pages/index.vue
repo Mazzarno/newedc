@@ -1,10 +1,8 @@
 <template>
   <div>
-    <!-- HEADER -->
     <section>
       <img cla src="~/assets/img/banniere-header.jpg" alt="" srcset="" />
     </section>
-    <!-- PRESENTATION -->
     <section>
       <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div class="max-w-screen-md">
