@@ -38,7 +38,8 @@
       </svg>
     </div>
     <div class="relative grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      <div
+      <NuxtLink
+        to="/"
         class="flex flex-col justify-between overflow-hidden text-center transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
       >
         <div class="p-5">
@@ -50,224 +51,105 @@
         <div
           class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
         ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
+      </NuxtLink>
+      <NuxtLink
+        to="/blog"
+        class="flex flex-col justify-between overflow-hidden text-center transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
       >
         <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
+          <div class="w-10 h-10 md:mb-8 rounded-full bg-orange-50">
+            <i class="mdi mdi-pencil-outline mdi-24px text-primary"></i>
           </div>
-          <p class="mb-2 font-bold">Bowling Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Disrupt inspire and think tank, social entrepreneur but preliminary
-            thinking think tank compelling.
-          </p>
+          <h1 class="text-primary text-xl">Blog</h1>
         </div>
         <div
           class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
         ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
+      </NuxtLink>
+      <NuxtLink
+        to="/videotheque"
+        class="flex flex-col justify-between overflow-hidden text-center transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
       >
         <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
+          <div class="w-10 h-10 md:mb-8 rounded-full bg-orange-50">
+            <i class="mdi mdi-video-outline mdi-24px text-primary"></i>
           </div>
-          <p class="mb-2 font-bold">Cycling Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            A slice of heaven. O for awesome, this chocka full cuzzie is as
-            rip-off as a cracker.
-          </p>
+          <h1 class="text-primary text-xl">Vidéothèque</h1>
         </div>
         <div
           class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
         ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
+      </NuxtLink>
+      <NuxtLink
+        to="/contact"
+        class="flex flex-col justify-between overflow-hidden text-center transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
       >
         <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
+          <div class="w-10 h-10 md:mb-8 rounded-full bg-orange-50">
+            <i class="mdi mdi-email-outline mdi-24px text-primary"></i>
           </div>
-          <p class="mb-2 font-bold">Weight Lifting Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Meanwhile, in behind the bicycle shed, Hercules Morse, as big as a
-            horse.
-          </p>
+          <h1 class="text-primary text-xl">Contact</h1>
         </div>
         <div
           class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
         ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
+      </NuxtLink>
+      <NuxtLink
+        to="/plan"
+        class="flex flex-col justify-between overflow-hidden text-center transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
       >
         <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
+          <div class="w-10 h-10 md:mb-8 rounded-full bg-orange-50">
+            <i class="mdi mdi-map-outline mdi-24px text-primary"></i>
           </div>
-          <p class="mb-2 font-bold">Golf Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Disrupt inspire and think tank, social entrepreneur but preliminary
-            thinking think tank compelling.
-          </p>
+          <h1 class="text-primary text-xl">Plan du site</h1>
         </div>
         <div
           class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
         ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
+      </NuxtLink>
+      <NuxtLink
+        to="/mentions_legales"
+        class="flex flex-col justify-between overflow-hidden text-center transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
       >
         <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
+          <div class="w-10 h-10 md:mb-8 rounded-full bg-orange-50">
+            <i class="mdi mdi-book-outline mdi-24px text-primary"></i>
           </div>
-          <p class="mb-2 font-bold">Hockey Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            A business big enough that it could be listed on the NASDAQ goes
-            belly up.
-          </p>
+          <h1 class="text-primary text-xl">Mentions Légales</h1>
         </div>
         <div
           class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
         ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
+      </NuxtLink>
+      <a
+        href="https://echappee-copro.org/sitemap.xml"
+        class="flex flex-col justify-between overflow-hidden text-center transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
       >
         <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
+          <div class="w-10 h-10 md:mb-8 rounded-full bg-orange-50">
+            <i class="mdi mdi-xml mdi-24px text-primary"></i>
           </div>
-          <p class="mb-2 font-bold">Shooting Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Lookout flogging bilge rat main sheet bilge water nipper fluke to go
-            on account heave down clap of thunder.
-          </p>
+          <h1 class="text-primary text-xl">Sitemap</h1>
         </div>
         <div
           class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
         ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
+      </a>
+      <a
+        href="https://echappee-copro.org/robots.txt"
+        class="flex flex-col justify-between overflow-hidden text-center transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
       >
         <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
+          <div class="w-10 h-10 md:mb-8 rounded-full bg-orange-50">
+            <i class="mdi mdi-robot-outline mdi-24px text-primary"></i>
           </div>
-          <p class="mb-2 font-bold">Martial Arts</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Webtwo ipsum orkut reddit meebo skype vimeo jajah spock empressr
-            zimbra, mobly napster.
-          </p>
+          <h1 class="text-primary text-xl">Robots</h1>
         </div>
         <div
           class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
         ></div>
-      </div>
+      </a>
     </div>
   </div>
 </template>

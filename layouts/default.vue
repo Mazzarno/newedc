@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="relative z-0">
     <!-- NAVBARZ -->
     <nav
-      class="header top-0 fixed z-50 opacity-100 bg-primary w-full drop-shadow-xl"
+      :class="{ 'hidden-navbar': !showNavbar }"
+      class="navbar inset-x-0 top-0 fixed z-40 opacity-100 bg-primary w-full drop-shadow-xl opacity-95"
     >
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -109,8 +110,8 @@
     </nav>
     <!-- DRAWER -->
     <nav
-      :class="open ? 'navbar-open' : 'navbar-close'"
-      class="navbar w-80 z-50 fixed bg-primary top-0 h-screen drop-shadow-2xl opacity-95"
+      :class="openDrawer ? 'drawer-open' : 'drawer-close'"
+      class="drawer w-80 z-50 fixed bg-primary top-0 h-screen drop-shadow-2xl opacity-95"
     >
       <div class="flex pr-2 justify-end">
         <button @click="drawer()" class="p-2 text-white text-xl font-bold">
@@ -143,7 +144,7 @@
           </li>
           <li class="my-8">
             <NuxtLink class="" to="blog">
-              <span class="mdi mdi-video mdi-24px text-white"></span>
+              <span class="mdi mdi-video-outline mdi-24px text-white"></span>
               <span class="ml-3 text-white">Vidéothèque</span>
             </NuxtLink>
           </li>
@@ -184,7 +185,7 @@
     </nav>
     <!-- MAIN -->
     <main>
-      <div class="pt-32 bg-primary"></div>
+      <div class="pt-32 bg-white"></div>
       <NuxtPage />
     </main>
     <!-- FOOTER -->
@@ -335,10 +336,10 @@
 <script>
 export default {
   data: () => ({
-    showHeader: true,
+    showNavbar: true,
     lastScrollPosition: 0,
     scrollOffset: 128,
-    open: false,
+    openDrawer: false,
   }),
   mounted() {
     this.lastScrollPosition = window.pageYOffset;
@@ -349,7 +350,7 @@ export default {
   },
   methods: {
     drawer() {
-      this.open = !this.open;
+      this.openDrawer = !this.openDrawer;
     },
     onScroll() {
       if (window.pageYOffset < 0) {
@@ -361,29 +362,29 @@ export default {
       ) {
         return;
       }
-      this.showHeader = window.pageYOffset < this.lastScrollPosition;
+      this.showNavbar = window.pageYOffset < this.lastScrollPosition;
       this.lastScrollPosition = window.pageYOffset;
     },
   },
 };
 </script>
 <style scoped>
-.header {
+.navbar {
   transform: translateY(0);
   transition: transform 300ms linear;
 }
 
-.header.is-hidden {
+.navbar.hidden-navbar {
   transform: translateY(-100%);
 }
-.navbar {
+.drawer {
   transition: all 330ms ease-out;
 }
 
-.navbar-open {
+.drawer-open {
   transform: translateX(0%);
 }
-.navbar-close {
+.drawer-close {
   transform: translateX(-100%);
 }
 </style>

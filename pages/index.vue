@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- HEADER -->
-    <section class="relative z-0">
+    <section>
       <img cla src="~/assets/img/banniere-header.jpg" alt="" srcset="" />
     </section>
     <!-- PRESENTATION -->

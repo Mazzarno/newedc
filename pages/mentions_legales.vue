@@ -1,291 +1,101 @@
 <template>
-  <div
-    class="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+  <main
+    class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased"
   >
-    <div
-      class="absolute inset-x-0 top-0 items-center justify-center hidden overflow-hidden md:flex md:inset-y-0"
-    >
-      <svg viewBox="0 0 88 88" class="w-full max-w-screen-xl text-indigo-100">
-        <circle fill="currentColor" cx="44" cy="44" r="15.5"></circle>
-        <circle
-          fill-opacity="0.2"
-          fill="currentColor"
-          cx="44"
-          cy="44"
-          r="44"
-        ></circle>
-        <circle
-          fill-opacity="0.2"
-          fill="currentColor"
-          cx="44"
-          cy="44"
-          r="37.5"
-        ></circle>
-        <circle
-          fill-opacity="0.3"
-          fill="currentColor"
-          cx="44"
-          cy="44"
-          r="29.5"
-        ></circle>
-        <circle
-          fill-opacity="0.3"
-          fill="currentColor"
-          cx="44"
-          cy="44"
-          r="22.5"
-        ></circle>
-      </svg>
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-primary">
+        Mentions Légales
+      </h1>
     </div>
-    <div class="relative grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
-      >
-        <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
-          </div>
-          <p class="mb-2 font-bold">Football Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-          </p>
-        </div>
-        <div
-          class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
-        ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
-      >
-        <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
-          </div>
-          <p class="mb-2 font-bold">Bowling Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Disrupt inspire and think tank, social entrepreneur but preliminary
-            thinking think tank compelling.
-          </p>
-        </div>
-        <div
-          class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
-        ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
-      >
-        <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
-          </div>
-          <p class="mb-2 font-bold">Cycling Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            A slice of heaven. O for awesome, this chocka full cuzzie is as
-            rip-off as a cracker.
-          </p>
-        </div>
-        <div
-          class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
-        ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
-      >
-        <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
-          </div>
-          <p class="mb-2 font-bold">Weight Lifting Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Meanwhile, in behind the bicycle shed, Hercules Morse, as big as a
-            horse.
-          </p>
-        </div>
-        <div
-          class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
-        ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
-      >
-        <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
-          </div>
-          <p class="mb-2 font-bold">Golf Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Disrupt inspire and think tank, social entrepreneur but preliminary
-            thinking think tank compelling.
-          </p>
-        </div>
-        <div
-          class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
-        ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
-      >
-        <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
-          </div>
-          <p class="mb-2 font-bold">Hockey Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            A business big enough that it could be listed on the NASDAQ goes
-            belly up.
-          </p>
-        </div>
-        <div
-          class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
-        ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
-      >
-        <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
-          </div>
-          <p class="mb-2 font-bold">Shooting Sports</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Lookout flogging bilge rat main sheet bilge water nipper fluke to go
-            on account heave down clap of thunder.
-          </p>
-        </div>
-        <div
-          class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
-        ></div>
-      </div>
-      <div
-        class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl"
-      >
-        <div class="p-5">
-          <div
-            class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50"
-          >
-            <svg
-              class="w-8 h-8 text-deep-purple-accent-400"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              ></polygon>
-            </svg>
-          </div>
-          <p class="mb-2 font-bold">Martial Arts</p>
-          <p class="text-sm leading-5 text-gray-900">
-            Webtwo ipsum orkut reddit meebo skype vimeo jajah spock empressr
-            zimbra, mobly napster.
-          </p>
-        </div>
-        <div
-          class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"
-        ></div>
+    <div class="flex justify-between px-4 mx-auto max-w-screen-xl">
+      <div class="mx-auto w-full max-w-2xl">
+        <h1 class="text-xl tracking-tight bold text-primary sm:text-2xl">
+          Identification
+        </h1>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Dénomination sociale ou raison sociale : L'ECHAPPEE DES COPROPRIETEES
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Adresse du siège social : 6 RUE DES DAIMS 31000 TOULOUSE
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Directrice : Manon LEROY
+        </p>
+        <h1 class="text-xl tracking-tight bold text-primary sm:text-2xl">
+          Site web
+        </h1>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Nom du site : www.echappee-copro.org
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Directrice de publication : Manon LEROY
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Email : contact@echappee-copro.org
+        </p>
+        <h1 class="text-xl tracking-tight bold text-primary sm:text-2xl">
+          Hébergerment du site web
+        </h1>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          PLANETHOSTER inc. 4416 Louis B. Mayer, Laval (Québec) H7P 0G1, Canada,
+          FR
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          (Nº Vert): 0 805 080 426 www.planethoster.com
+        </p>
+        <h1 class="text-xl tracking-tight bold text-primary sm:text-2xl">
+          Création du site web
+        </h1>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">Alexis GERMAIN</p>
+
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">Vue.js & Nuxt</p>
+        <h1 class="text-xl tracking-tight bold text-primary sm:text-2xl">
+          Termes d'utilisation
+        </h1>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          L'utilisateur du site Internet reconnaît disposer de la compétence et
+          des moyens nécessaires pour accéder et utiliser ce site. Il reconnaît
+          également avoir pris connaissance de la présente notice légale et
+          s'engage à la respecter.
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          L'utilisateur dispose d'un droit d'accès, de modification, de
+          rectification et de suppression des données qui le concernent (article
+          34 de la loi " Informatique et Libertés "). Pour l'exercer,
+          l'utilisateur peut s'adresser auprès du Directeur de la publication
+          visé plus haut.
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Toute représentation totale ou partielle de ce site par quelque
+          procédé que ce soit, sans l'autorisation expresse de l'exploitant du
+          site Internet est interdite et constituerait une contrefaçon
+          sanctionnée par les articles L 335-2 et suivants du Code de la
+          propriété intellectuelle.
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Il en est de même des éventuelles bases de données figurant sur le
+          site Internet qui sont protégées par les dispositions de la loi du 11
+          juillet 1998 portant transposition dans le Code de la propriété
+          intellectuelle (CPI) de la directive européenne du 11 mars 1996
+          relative à la protection juridique des bases de données.
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Les marques de l'exploitant du site Internet et de ses partenaires,
+          ainsi que les logos figurant sur le site sont des marques (semi
+          figuratives ou non) déposées.
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Les liens hypertextes mis en place dans le cadre du site Internet en
+          direction d'autres ressources présentes sur le réseau de l'Internet,
+          et notamment vers ses partenaires ont fait l'objet d'une autorisation
+          préalable expresse et écrite.
+        </p>
+        <p class="mb-4 font-light text-gray-900 sm:text-xl">
+          Les utilisateurs visiteurs du site Internet ne peuvent mettre en place
+          un hyperlien en direction de ces sites sans l'autorisation expresse et
+          préalable de l'exploitant du site Internet
+        </p>
       </div>
     </div>
-  </div>
+  </main>
 </template>
