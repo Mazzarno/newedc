@@ -5,9 +5,9 @@
         <div
           class="flex rounded-lg items-center justify-center bg-primary backdrop-blur-xl rounded drop-shadow-2xl opacity-95"
         >
-          <img
-            src="~\assets\img\logo-nav.png"
+          <NuxtImg
             loading="lazy"
+            src="/img/logo-nav.png"
             class="w-3/4 items-center justify-center"
           />
         </div>

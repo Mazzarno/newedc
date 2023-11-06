@@ -1,5 +1,4 @@
-
- <template>
+<template>
   <swiper
     class="swiper"
     :loop="false"
@@ -38,87 +37,101 @@
     }"
   >
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/abbe-pierre.png"
+        src="/img/logo/abbe-pierre.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/fondation2france.png"
+        src="/img/logo/fondation2france.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/eauetvie.png"
+        src="/img/logo/eauetvie.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/ashoka.png"
+        src="/img/logo/ashoka.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/agglopole.png"
+        src="/img/logo/agglopole.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/erasmus+.png"
+        src="/img/logo/erasmus+.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/gefosat.png"
+        src="/img/logo/gefosat.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/leroy-merlin-source.png"
+        src="/img/logo/leroy-merlin-source.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/lille.png"
+        src="/img/logo/lille.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/toulouse.png"
+        src="/img/logo/toulouse.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/sete.png"
+        src="/img/logo/sete.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/palanca.png"
+        src="/img/logo/palanca.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/plainecommune.png"
+        src="/img/logo/plainecommune.png"
         alt=""
     /></swiper-slide>
     <swiper-slide
-      ><img
+      ><NuxtImg
+        loading="lazy"
         class="object-cover transition delay-100 hover:scale-110 duration-300 m-5"
-        src="~/assets/img/logo/urbanis.png"
+        src="/img/logo/urbanis.png"
         alt=""
     /></swiper-slide>
   </swiper>

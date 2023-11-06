@@ -19,7 +19,8 @@
             </div>
           </div>
           <div>
-            <img
+            <NuxtImg
+              loading="lazy"
               alt="content"
               class="object-cover object-center mx-auto rounded"
               :src="
@@ -38,7 +39,8 @@
               ></div>
             </div>
             <div>
-              <img
+              <NuxtImg
+                loading="lazy"
                 alt="content"
                 class="object-cover object-center mx-auto w-full rounded shadow-lg"
                 :src="

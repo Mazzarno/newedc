@@ -1,7 +1,13 @@
 <template>
   <div>
     <section>
-      <img cla src="~/assets/img/banniere-header.jpg" alt="" srcset="" />
+      <NuxtImg
+        loading="lazy"
+        cla
+        src="/img/banniere-header.jpg"
+        alt=""
+        srcset=""
+      />
     </section>
     <section>
       <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
@@ -41,10 +47,10 @@
         class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6 justify-items-center md:justify-items-start"
       >
         <div class="w-full">
-          <img
+          <NuxtImg
             loading="lazy"
             class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last"
-            src="~/assets/img/totem1.jpg"
+            src="/img/totem1.jpg"
             alt="dashboard image"
           />
         </div>
@@ -72,9 +78,10 @@
             Faciliter l’entraide et l’inspiration entre Copropriétés.
           </p>
         </div>
-        <img
+        <NuxtImg
+          loading="lazy"
           class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center"
-          src="~/assets/img/totem4.jpg"
+          src="/img/totem4.jpg"
           alt="dashboard image"
         />
       </div>
@@ -84,9 +91,10 @@
       <div
         class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6 justify-items-center md:justify-items-start"
       >
-        <img
+        <NuxtImg
+          loading="lazy"
           class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last"
-          src="~/assets/img/totem7.jpg"
+          src="/img/totem7.jpg"
           alt="dashboard image"
         />
 
@@ -123,7 +131,8 @@
                 nuxt-link
                 :to="`/blog/articles/${article.id}`"
               >
-                <img
+                <NuxtImg
+                  loading="lazy"
                   class="w-full object-cover object-center transition duration-200 group-hover:scale-110"
                   :src="
                     'https://echappee-copro.fr' + article.Media_contenu[0].url
@@ -151,11 +160,11 @@
                     <div
                       class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100"
                     >
-                      <img
+                      <NuxtImg
+                        loading="lazy"
                         :src="
                           'https://echappee-copro.fr' + article.Avatar[0].url
                         "
-                        loading="lazy"
                         :alt="article.Auteur"
                         class="h-full w-full object-cover object-center"
                       />

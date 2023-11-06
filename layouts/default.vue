@@ -3,7 +3,7 @@
     <!-- NAVBARZ -->
     <nav
       :class="{ 'hidden-navbar': !showNavbar }"
-      class="navbar inset-x-0 top-0 fixed z-40 opacity-100 bg-primary w-full drop-shadow-xl opacity-95 rounded-b-2xl"
+      class="navbar inset-x-0 top-0 fixed z-40 bg-primary w-full opacity-95"
     >
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -12,8 +12,9 @@
           class="flex items-center transition delay-100 hover:scale-105 duration-300"
           to="/"
         >
-          <img
-            src="~\assets\img\logo-nav.png"
+          <NuxtImg
+            loading="lazy"
+            src="/img/logo-nav.png"
             class="h-24 mr-3"
             alt="L'échappée des copropriétés logo"
           />
@@ -122,8 +123,9 @@
         class="transition delay-100 hover:scale-110 duration-300"
         to="/"
       >
-        <img
-          src="~\assets\img\logo-nav.png"
+        <NuxtImg
+          loading="lazy"
+          src="/img/logo-nav.png"
           class="h-24 items-center mx-auto"
           alt="L'échappée des copropriétés logo"
         />
@@ -189,48 +191,31 @@
       <NuxtPage />
     </main>
     <!-- COOKIE BANNER -->
-    <div class="mx-auto max-w-screen-2xl px-4 pb-4 md:px-8">
-      <div
-        class="relative flex flex-wrap rounded-lg bg-primary opacity-95 px-4 py-3 shadow-lg sm:flex-nowrap sm:items-center sm:justify-center sm:gap-3 sm:pr-8 md:px-8"
-      >
-        <div
-          class="order-1 mb-2 inline-block w-11/12 max-w-screen-sm text-sm text-white sm:order-none sm:mb-0 sm:w-auto md:text-base"
-        >
-          This is a section of some simple filler text, also known as
-          placeholder text.
-        </div>
+    <section
+      :class="{ 'hidden-cookie': !openCookie }"
+      class="cookie fixed max-w-md p-4 mx-auto bg-white border border-gray-200 left-12 bottom-16 opacity-95 drop-shadow-2xl rounded-2xl"
+    >
+      <h2 class="font-semibold text-primary">🍪 Information sur nos Cookies</h2>
 
-        <a
-          href="#"
-          class="order-last inline-block w-full whitespace-nowrap rounded-lg bg-indigo-600 px-4 py-2 text-center text-xs font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-700 focus-visible:ring active:bg-indigo-800 sm:order-none sm:w-auto md:text-sm"
-          >Learn more</a
-        >
+      <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+        Notre site utilise qu'un seul cookie, le cookie de Youtube qui recense,
+        à la lecture de la vidéo, le nombre de vues. En continuant à utiliser
+        notre site, vous acceptez notre utilisation de ce cookie.
+      </p>
 
-        <div
-          class="order-2 flex w-1/12 items-start justify-end sm:absolute sm:right-0 sm:order-none sm:mr-2 sm:w-auto xl:mr-3"
+      <div class="flex items-center justify-between mt-4 gap-x-4 shrink-0">
+        <button
+          class="text-xs text-gray-800 underline transition-colors duration-300 dark:text-white dark:hover:text-gray-400 hover:text-gray-600 focus:outline-none"
+        ></button>
+
+        <button
+          class="text-xs bg-primary font-medium rounded-lg hover:bg-secondary text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none drop-shadow-lg hover:drop-shadow-2xl transition hover:tranlate-y-10 duration-300"
+          @click="cookie()"
         >
-          <button
-            type="button"
-            class="text-white transition duration-100 hover:text-indigo-100 active:text-indigo-200"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 xl:h-6 xl:w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
+          Accepter
+        </button>
       </div>
-    </div>
+    </section>
     <!-- FOOTER -->
     <footer class="p-4 bg-primary">
       <div
@@ -243,8 +228,9 @@
             to="/"
             class="flex items-center md:justify-start justify-center transition delay-100 hover:scale-105 duration-300"
           >
-            <img
-              src="~\assets\img\logo-nav.png"
+            <NuxtImg
+              loading="lazy"
+              src="/img/logo-nav.png"
               class="h-24 mr-3"
               alt="L'échappée des copropriétés logo"
             />
@@ -383,6 +369,7 @@ export default {
     lastScrollPosition: 0,
     scrollOffset: 128,
     openDrawer: false,
+    openCookie: true,
   }),
   mounted() {
     this.lastScrollPosition = window.pageYOffset;
@@ -394,6 +381,9 @@ export default {
   methods: {
     drawer() {
       this.openDrawer = !this.openDrawer;
+    },
+    cookie() {
+      this.openCookie = !this.openCookie;
     },
     onScroll() {
       if (window.pageYOffset < 0) {
@@ -419,6 +409,14 @@ export default {
 
 .navbar.hidden-navbar {
   transform: translateY(-100%);
+}
+.cookie {
+  transform: translateX(0%);
+  transition: transform 300ms linear;
+}
+
+.cookie.hidden-cookie {
+  transform: translateX(-150%);
 }
 .drawer {
   transition: all 330ms ease-out;
