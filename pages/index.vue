@@ -1,14 +1,10 @@
 <template>
   <div>
-    <!-- INTRODUCTION -->
+    <!-- HEADER -->
     <section>
-      <NuxtImg
-        loading="lazy"
-        format="webp"
-        src="/img/banniere-header.jpg"
-        alt="Header EDC"
-      />
+      <NuxtImg src="/img/banniere-header.jpg" alt="Header EDC" />
     </section>
+    <!-- INTRODUCTION -->
     <section>
       <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div class="max-w-screen-md">
@@ -113,199 +109,18 @@
       </div>
     </section>
     <!-- Preview BLOG -->
-    <section class="bg-tertiary pb-14">
-      <div class="pt-8 px-4 mx-auto max-w-screen-xl sm:pt-14 lg:px-6">
-        <h1 class="text-4xl tracking-tight font-extrabold text-primary">
-          Le Blog
-        </h1>
-      </div>
-      <div class="container px-5 sm:pt-14 pt-8 mx-auto">
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-          <div
-            v-for="article in categories[1].articles"
-            :key="article.id"
-            class="p-4"
-          >
-            <div
-              class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden object-cover self-center shadow-xl transition delay-100 hover:shadow-2xl duration-300"
-            >
-              <NuxtLink
-                class="group"
-                nuxt-link
-                :to="`/blog/articles/${article.id}`"
-              >
-                <NuxtImg
-                  format="webp"
-                  loading="lazy"
-                  class="w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                  :src="
-                    'https://echappee-copro.fr' + article.Media_contenu[0].url
-                  "
-                  alt="blog"
-                />
-              </NuxtLink>
-              <div class="p-6">
-                <div>
-                  <nuxt-link
-                    nuxt-link
-                    :to="`/blog/articles/${article.id}`"
-                    class="text-xl text-primary hoverunderline mb-2"
-                  >
-                    {{ article.Titre }}
-                  </nuxt-link>
-                  <p
-                    class="leading-relaxed mb-3 mt-2 truncate block text-gray-700"
-                  >
-                    {{ article.Description }}
-                  </p>
-                </div>
-                <div class="mt-auto flex items-end justify-between mb-3">
-                  <div class="flex items-center gap-2">
-                    <div
-                      class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100"
-                    >
-                      <NuxtImg
-                        loading="lazy"
-                        :src="
-                          'https://echappee-copro.fr' + article.Avatar[0].url
-                        "
-                        :alt="article.Auteur"
-                        class="h-full w-full object-cover object-center"
-                      />
-                    </div>
-
-                    <div>
-                      <span class="block text-primary">{{
-                        article.Auteur
-                      }}</span>
-                      <span class="block text-sm text-gray-400">{{
-                        moment(article.Publication).locale("fr").format("LL")
-                      }}</span>
-                    </div>
-                  </div>
-
-                  <span class="rounded border px-2 py-1 text-sm text-gray-500"
-                    >Article</span
-                  >
-                </div>
-                <div class="flex justify-self-end flex-wrap">
-                  <NuxtLink
-                    nuxt-link
-                    :to="`/blog/articles/${article.id}`"
-                    class="text-primary inline-flex items-center md:mb-2 lg:mb-0 hover:underline transition duration-300 hover:animate-pulse"
-                    >Voir l'article
-                    <i class="ml-1 mdi mdi-arrow-right-thin mdi-24px"></i>
-                  </NuxtLink>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <NuxtLink nuxt-link to="/blog">
-          <button
-            class="flex mx-auto mt-16 text-white bg-primary border-0 py-2 px-8 focus:outline-none hover:bg-secondary rounded text-lg shadow-xl transition delay-100 hover:shadow-2xl duration-300"
-          >
-            Voir tout le blog
-          </button>
-        </NuxtLink>
-      </div>
-    </section>
+    <LazyPreviewBlog />
     <!-- PARTENAIRE -->
-    <section class="bg-white mx-auto pb-24">
-      <div
-        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6"
-      >
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-primary">
-          Ils·Elles nous font confiance :
-        </h2>
-      </div>
-      <div class="grid grid-cols-6 gap-4">
-        <div class="col-start-2 col-span-4">
-          <confiancelist></confiancelist>
-        </div>
-      </div>
-    </section>
+    <LazyConfiancelist />
     <!-- Preview Vidéothèque -->
-    <section>
-      <div
-        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6"
-      >
-        <h2 class="text-4xl tracking-tight font-extrabold text-primary">
-          La Vidéothèque
-        </h2>
-      </div>
-      <div class="container px-5 pb-24 mx-auto">
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-          <div v-for="video in playlists[1].videos" :key="video.id" class="p-4">
-            <div
-              class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden object-cover self-center shadow-xl transition delay-100 hover:shadow-2xl duration-300"
-            >
-              <div class="video-responsive group">
-                <iframe
-                  class="object-cover object-center transition duration-200 group-hover:scale-110"
-                  defer
-                  :src="yt_api + video.URL + yt_nocookie"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <div class="p-6">
-                <div class="">
-                  <h1 class="text-xl text-gray-900 mb-2 truncate block">
-                    {{ video.Titre }}
-                  </h1>
-                  <p class="leading-relaxed mb-3 truncate block text-gray-700">
-                    {{ video.Description }}
-                  </p>
-                </div>
-                <div class="flex items-center flex-wrap">
-                  <a
-                    :href="youtube_api + video.URL"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-primary inline-flex items-center md:mb-2 lg:mb-0 hover:underline transition duration-300 hover:animate-pulse"
-                    >Voir la vidéo sur Youtube
-                    <i class="ml-1 mdi mdi-youtube mdi-24px"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <NuxtLink nuxt-link to="/videotheque">
-          <button
-            class="flex mx-auto mt-16 text-white bg-primary border-0 py-2 px-8 focus:outline-none hover:bg-secondary rounded text-lg shadow-xl transition delay-100 hover:shadow-2xl duration-300"
-          >
-            Voir la vidéothèque
-          </button>
-        </NuxtLink>
-      </div>
-    </section>
+    <LazyPreviewVideo />
   </div>
 </template>
 
 <script setup>
-import moment from "moment";
-import "moment/dist/locale/fr";
-const categories = await $fetch("https://echappee-copro.fr/categories").catch(
-  (error) => error.data
-);
-const playlists = await $fetch("https://echappee-copro.fr/playlists").catch(
-  (error) => error.data
-);
 useHead({
   title: "Accueil",
 });
 </script>
-<script>
-export default {
-  data() {
-    return {
-      yt_api: "https://www.youtube-nocookie.com/embed/",
-      yt_nocookie: "?enablejsapi=1",
-      youtube_api: "https://www.youtube.com/watch?v=",
-    };
-  },
-};
-</script>
+
+
