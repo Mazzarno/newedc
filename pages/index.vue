@@ -1,12 +1,12 @@
 <template>
   <div>
+    <!-- INTRODUCTION -->
     <section>
       <NuxtImg
         loading="lazy"
-        cla
+        format="webp"
         src="/img/banniere-header.jpg"
-        alt=""
-        srcset=""
+        alt="Header EDC"
       />
     </section>
     <section>
@@ -49,9 +49,10 @@
         <div class="w-full">
           <NuxtImg
             loading="lazy"
+            format="webp"
             class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last"
             src="/img/totem1.jpg"
-            alt="dashboard image"
+            alt="Totem À l’échelle d’une Copropriété"
           />
         </div>
         <div class="mt-4 md:mt-0 order-first md:order-last">
@@ -80,9 +81,10 @@
         </div>
         <NuxtImg
           loading="lazy"
+          format="webp"
           class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center"
           src="/img/totem4.jpg"
-          alt="dashboard image"
+          alt="Totem Faciliter l’entraide et l’inspiration entre Copropriétés."
         />
       </div>
     </section>
@@ -92,10 +94,11 @@
         class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6 justify-items-center md:justify-items-start"
       >
         <NuxtImg
+          format="webp"
           loading="lazy"
           class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last"
           src="/img/totem7.jpg"
-          alt="dashboard image"
+          alt="Totem À l’échelle de l’écosystème de l’habitat privé"
         />
 
         <div class="mt-4 md:mt-0 order-first md:order-last">
@@ -132,6 +135,7 @@
                 :to="`/blog/articles/${article.id}`"
               >
                 <NuxtImg
+                  format="webp"
                   loading="lazy"
                   class="w-full object-cover object-center transition duration-200 group-hover:scale-110"
                   :src="
@@ -233,7 +237,6 @@
       <div class="container px-5 pb-24 mx-auto">
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
           <div v-for="video in playlists[1].videos" :key="video.id" class="p-4">
-            <!---->
             <div
               class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden object-cover self-center shadow-xl transition delay-100 hover:shadow-2xl duration-300"
             >

@@ -193,14 +193,14 @@
     <!-- COOKIE BANNER -->
     <section
       :class="{ 'hidden-cookie': !openCookie }"
-      class="cookie fixed max-w-md p-4 mx-auto bg-white border border-gray-200 left-12 bottom-16 opacity-95 drop-shadow-2xl rounded-2xl"
+      class="cookie fixed max-w-md p-4 mx-auto bg-white border z-40 border-gray-200 left-0 right-0 bottom-10 opacity-95 drop-shadow-2xl rounded-2xl"
     >
       <h2 class="font-semibold text-primary">🍪 Information sur nos Cookies</h2>
 
-      <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
-        Notre site utilise qu'un seul cookie, le cookie de Youtube qui recense,
-        à la lecture de la vidéo, le nombre de vues. En continuant à utiliser
-        notre site, vous acceptez notre utilisation de ce cookie.
+      <p class="mt-4 text-sm text-gray-900">
+        Notre site utilise que le cookie de Youtube qui recense, à la lecture de
+        la vidéo, le nombre de vues. En continuant à utiliser notre site, vous
+        acceptez notre utilisation de ce cookie.
       </p>
 
       <div class="flex items-center justify-between mt-4 gap-x-4 shrink-0">
@@ -209,7 +209,7 @@
         ></button>
 
         <button
-          class="text-xs bg-primary font-medium rounded-lg hover:bg-secondary text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none drop-shadow-lg hover:drop-shadow-2xl transition hover:tranlate-y-10 duration-300"
+          class="text-xs bg-primary font-medium rounded-lg hover:bg-secondary text-white px-4 py-2.5 focus:outline-none drop-shadow-lg hover:drop-shadow-2xl transition duration-300"
           @click="cookie()"
         >
           Accepter

@@ -6,10 +6,10 @@ export default defineNuxtConfig({
     "nuxt-simple-robots",
     "nuxt-simple-sitemap",
     "nuxt-schema-org",
-    "@nuxt/image"
+    "@nuxt/image",
   ],
   vite: { ssr: { noExternal: ["moment"] } },
-   nitro: { preset: "netlify-edge" },
+nitro: { preset: "netlify-edge" },
   // nitro: { preset: "node" },
   // nitro: { preset: "node-cluster" },
   swiper: {
@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   css: ["~/assets/css/styles.css", "@mdi/font/css/materialdesignicons.min.css"],
-   site: {
+  site: {
     url: "https://echappee-copro.org/",
     name: "L'Échappée des copropriétés",
   },
