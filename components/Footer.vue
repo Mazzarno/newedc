@@ -1,5 +1,5 @@
 <template>
-  <footer class="p-4 bg-primary">
+  <footer class="p-4 bg-primary rounded-t-lg opacity-95">
     <div
       class="container px-5 py-4 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
     >

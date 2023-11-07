@@ -1,16 +1,16 @@
 <template>
   <div>
     <!-- HEADER -->
-    <section
-      class="relative flex items-center justify-center overflow-hidden drop-shadow-2xl pt-8 sm:pt-16"
-    >
-      <NuxtImg
-        src="/img/banniere-header.jpg"
-        loading="lazy"
-        alt="Header EDC"
-        class="h-full object-cover object-center rounded-lg"
-      />
-    </section>
+    <div class="mx-auto max-w-screen-2xl pt-8 sm:pt-16">
+      <section
+        class="min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg shadow-2xl opacity-90"
+      >
+        <img
+          src="/img/BANNIERE.jpg"
+          class="h-full w-full object-cover object-center"
+        />
+      </section>
+    </div>
     <!-- INTRODUCTION -->
     <section>
       <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
@@ -54,7 +54,7 @@
           <NuxtImg
             loading="lazy"
             format="webp"
-            class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last"
+            class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last rounded-lg"
             src="/img/totem1.jpg"
             alt="Totem À l’échelle d’une Copropriété"
           />
@@ -73,7 +73,7 @@
     <!-- TOTEM 2 -->
     <section class="bg-tertiary">
       <div
-        class="gap-8 items-center md:justify-items-end justify-items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6"
+        class="gap-8 items-center md:justify-items-end justify-items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6 rounded-lg"
       >
         <div class="mt-4 md:mt-0">
           <h2 class="mb-4 text-2xl tracking-tight font-extrabold text-primary">
@@ -86,7 +86,7 @@
         <NuxtImg
           loading="lazy"
           format="webp"
-          class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center"
+          class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center rounded-lg"
           src="/img/totem4.jpg"
           alt="Totem Faciliter l’entraide et l’inspiration entre Copropriétés."
         />
@@ -100,7 +100,7 @@
         <NuxtImg
           format="webp"
           loading="lazy"
-          class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last"
+          class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last rounded-lg"
           src="/img/totem7.jpg"
           alt="Totem À l’échelle de l’écosystème de l’habitat privé"
         />

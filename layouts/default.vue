@@ -3,7 +3,7 @@
     <!-- NAVBARZ -->
     <nav
       :class="{ 'hidden-navbar': !showNavbar }"
-      class="navbar inset-x-0 top-0 fixed z-40 bg-primary w-full opacity-95"
+      class="navbar inset-x-0 top-0 fixed z-40 bg-primary w-full opacity-95 rounded-b-lg drop-shadow-2xl"
     >
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
