@@ -4,12 +4,17 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
+    'nuxt-delay-hydration',
     "@nuxt/image",
     "nuxt-simple-robots",
     "nuxt-simple-sitemap",
     "nuxt-schema-org",
     "nuxt-swiper",
   ],
+    delayHydration: {
+    mode: 'init',
+    debug: process.env.NODE_ENV === 'development'
+  },
   vite: { ssr: { noExternal: ["moment"] } },
   nitro: { preset: "netlify-edge" },
   // nitro: { preset: "node" },
