@@ -2,14 +2,16 @@
 export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
-    "nuxt-swiper",
+    "@pinia/nuxt",
+    "@pinia-plugin-persistedstate/nuxt",
+    "@nuxt/image",
     "nuxt-simple-robots",
     "nuxt-simple-sitemap",
     "nuxt-schema-org",
-    "@nuxt/image",
+    "nuxt-swiper",
   ],
   vite: { ssr: { noExternal: ["moment"] } },
-nitro: { preset: "netlify-edge" },
+  nitro: { preset: "netlify-edge" },
   // nitro: { preset: "node" },
   // nitro: { preset: "node-cluster" },
   swiper: {

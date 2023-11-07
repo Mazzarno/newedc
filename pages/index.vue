@@ -1,8 +1,15 @@
 <template>
   <div>
     <!-- HEADER -->
-    <section>
-      <NuxtImg src="/img/banniere-header.jpg" alt="Header EDC" />
+    <section
+      class="relative flex items-center justify-center overflow-hidden drop-shadow-2xl pt-8 sm:pt-16"
+    >
+      <NuxtImg
+        src="/img/banniere-header.jpg"
+        loading="lazy"
+        alt="Header EDC"
+        class="h-full object-cover object-center rounded-lg"
+      />
     </section>
     <!-- INTRODUCTION -->
     <section>
@@ -32,6 +39,7 @@
         </div>
       </div>
     </section>
+
     <!-- TOTEM 1 -->
     <section class="bg-white">
       <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">

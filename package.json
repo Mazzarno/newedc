@@ -1,6 +1,9 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "overrides": {
+    "vue": "latest"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -12,6 +15,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.0.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^18",
     "nuxt": "^3.7.4",
@@ -22,6 +26,7 @@
   },
   "dependencies": {
     "@mdi/font": "^7.2.96",
+    "@pinia/nuxt": "^0.5.1",
     "flowbite": "^1.6.6",
     "highlight.js": "11.9.0",
     "markdown-it": "13.0.2",
@@ -33,6 +38,7 @@
     "markdown-it-sub": "1.0.0",
     "markdown-it-sup": "1.0.0",
     "moment": "^2.29.4",
+    "pinia": "^2.1.7",
     "vue-server-renderer": "^2.7.14",
     "vue-template-compiler": "^2.7.14"
   }
