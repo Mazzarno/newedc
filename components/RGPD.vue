@@ -1,7 +1,7 @@
 <template>
   <section
     v-if="store.cookie"
-    class="cookie fixed max-w-md p-4 mx-auto bg-white border z-40 border-gray-200 left-0 right-0 bottom-10 opacity-95 drop-shadow-2xl rounded-2xl"
+    class="cookie fixed max-w-md p-4 mx-auto bg-white border z-40 border-gray-200 left-0 right-0 bottom-10 opacity-95 drop-shadow-2xl rounded-2xl px-4 lg:px-6"
   >
     <h2 class="font-semibold text-primary">🍪 Information sur nos Cookies</h2>
 
@@ -40,5 +40,3 @@ store.cookie;
   transform: translateX(-300%);
 }
 </style>
-
-
