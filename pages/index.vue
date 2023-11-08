@@ -1,13 +1,13 @@
 <template>
   <div>
     <!-- HEADER -->
-    <div class="mx-auto max-w-screen-2xl pt-8 sm:pt-16">
+    <div class="mx-auto max-w-screen-2xl pt-8 sm:pt-16 px-4 lg:px-6">
       <section
         class="min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg shadow-2xl opacity-90"
       >
         <img
           src="/img/BANNIERE.jpg"
-          class="h-full w-full object-cover object-center"
+          class="h-full w-full max-h-[585px] max-w-[1536px] object-cover object-center"
         />
       </section>
     </div>
@@ -130,5 +130,3 @@ useHead({
   title: "Accueil",
 });
 </script>
-
-
