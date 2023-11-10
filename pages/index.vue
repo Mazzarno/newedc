@@ -118,8 +118,9 @@
     </section>
     <!-- Preview BLOG -->
     <LazyPreviewBlog />
-    <!-- PARTENAIRE -->
-    <LazyConfiancelist />
+    <!-- PARTENAIRE 
+    <LazyConfiancelist /> -->
+    <LazyConfiance />
     <!-- Preview Vidéothèque -->
     <LazyPreviewVideo />
   </div>
