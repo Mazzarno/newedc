@@ -118,9 +118,9 @@
     </section>
     <!-- Preview BLOG -->
     <LazyPreviewBlog />
-    <!-- PARTENAIRE 
-    <LazyConfiancelist /> -->
-    <LazyConfiance />
+    <!-- PARTENAIRE -->
+    <LazyConfiancelist />
+    <!--  <LazyConfiance /> -->
     <!-- Preview Vidéothèque -->
     <LazyPreviewVideo />
   </div>
@@ -128,6 +128,6 @@
 
 <script setup>
 useHead({
-  title: "Accueil",
-});
+  title: 'Accueil',
+})
 </script>

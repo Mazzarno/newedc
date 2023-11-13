@@ -52,22 +52,25 @@
               <NuxtLink
                 to="/blog"
                 class="block py-2 pl-3 pr-4 transition hover:underline hover:scale-105 duration-300 hover:animate-pulse text-white text-lg"
-                >Blog</NuxtLink
               >
+                Blog
+              </NuxtLink>
             </li>
             <li>
               <NuxtLink
                 to="/videotheque"
                 class="block py-2 pl-3 pr-4 transition hover:underline hover:scale-105 duration-300 hover:animate-pulse text-white text-lg"
-                >Vidéothèque</NuxtLink
               >
+                Vidéothèque
+              </NuxtLink>
             </li>
             <li>
               <NuxtLink
                 to="/contact"
                 class="block py-2 pl-3 pr-4 transition hover:underline hover:scale-105 duration-300 hover:animate-pulse text-white text-lg"
-                >Contact</NuxtLink
               >
+                Contact
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -82,7 +85,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span class="mdi mdi-24px mdi-linkedin"> </span>
+                <span class="mdi mdi-24px mdi-linkedin"></span>
               </a>
             </li>
             <li>
@@ -92,7 +95,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span class="mdi mdi-24px mdi-facebook"> </span>
+                <span class="mdi mdi-24px mdi-facebook"></span>
               </a>
             </li>
             <li>
@@ -102,7 +105,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span class="mdi mdi-24px mdi-youtube"> </span>
+                <span class="mdi mdi-24px mdi-youtube"></span>
               </a>
             </li>
           </ul>
@@ -164,7 +167,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="mdi mdi-24px mdi-linkedin"> </span>
+            <span class="mdi mdi-24px mdi-linkedin"></span>
           </a>
           <a
             class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
@@ -172,7 +175,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="mdi mdi-24px mdi-facebook"> </span>
+            <span class="mdi mdi-24px mdi-facebook"></span>
           </a>
           <a
             class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
@@ -180,15 +183,15 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="mdi mdi-24px mdi-youtube"> </span>
+            <span class="mdi mdi-24px mdi-youtube"></span>
           </a>
         </span>
       </div>
     </nav>
     <!-- MAIN -->
-    <main>
+    <main class="min-h-screen">
       <div class="pt-32 bg-white"></div>
-      <NuxtPage />
+      <NuxtPage :key="$route.fullPath" />
     </main>
     <!-- RGPD -->
     <RGPD />
@@ -197,8 +200,7 @@
   </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 <script>
 export default {
   data: () => ({
@@ -208,31 +210,31 @@ export default {
     openDrawer: false,
   }),
   mounted() {
-    this.lastScrollPosition = window.pageYOffset;
-    window.addEventListener("scroll", this.onScroll);
+    this.lastScrollPosition = window.pageYOffset
+    window.addEventListener('scroll', this.onScroll)
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener('scroll', this.onScroll)
   },
   methods: {
     drawer() {
-      this.openDrawer = !this.openDrawer;
+      this.openDrawer = !this.openDrawer
     },
     onScroll() {
       if (window.pageYOffset < 0) {
-        return;
+        return
       }
       if (
         Math.abs(window.pageYOffset - this.lastScrollPosition) <
         this.scrollOffset
       ) {
-        return;
+        return
       }
-      this.showNavbar = window.pageYOffset < this.lastScrollPosition;
-      this.lastScrollPosition = window.pageYOffset;
+      this.showNavbar = window.pageYOffset < this.lastScrollPosition
+      this.lastScrollPosition = window.pageYOffset
     },
   },
-};
+}
 </script>
 <style scoped>
 .navbar {
