@@ -119,8 +119,7 @@
     <!-- Preview BLOG -->
     <LazyPreviewBlog />
     <!-- PARTENAIRE -->
-    <LazyConfiancelist />
-    <!--  <LazyConfiance /> -->
+    <LazyPartenaireListe />
     <!-- Preview Vidéothèque -->
     <LazyPreviewVideo />
   </div>

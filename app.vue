@@ -2,7 +2,7 @@
   <div class="select-none">
     <Loading v-show="loading" />
     <NuxtLayout></NuxtLayout>
-    <LazyRGPD />
+    <RGPD />
   </div>
 </template>
 
