@@ -22,7 +22,7 @@
             <NuxtImg
               loading="lazy"
               alt="content"
-              class="object-cover object-center mx-auto rounded"
+              class="object-cover object-center mx-auto w-full rounded shadow-lg"
               :src="
                 api_url + articles[$route.params.id - 1].Media_contenu[0].url
               "
@@ -79,18 +79,20 @@
               <small
                 class="italic"
                 v-if="articles[$route.params.id - 1].Publication"
-                >Publié le
+              >
+                Publié le
                 {{
                   moment(articles[$route.params.id - 1].Publication)
-                    .locale("fr")
-                    .format("LL")
-                }}</small
-              ><small class="italic">Ecrit par : </small>
+                    .locale('fr')
+                    .format('LL')
+                }}
+              </small>
+              <small class="italic">Ecrit par :</small>
             </p>
             <span class="flex-grow flex flex-col pl-2">
-              <span class="text-gray-900 leading-relaxed italic">{{
-                articles[$route.params.id - 1].Auteur
-              }}</span>
+              <span class="text-gray-900 leading-relaxed italic">
+                {{ articles[$route.params.id - 1].Auteur }}
+              </span>
             </span>
           </div>
         </div>
@@ -99,16 +101,16 @@
   </div>
 </template>
 <script setup>
-import md from "markdown-it";
-import moment from "moment";
-import "moment/dist/locale/fr";
-const renderer = md();
-const nuxtApp = useNuxtApp();
-const api_url = "https://echappee-copro.fr";
-const yt_api = "https://www.youtube.com/embed/";
-const articles = await $fetch("https://echappee-copro.fr/articles").catch(
-  (error) => error.data
-);
+import md from 'markdown-it'
+import moment from 'moment'
+import 'moment/dist/locale/fr'
+const renderer = md()
+const nuxtApp = useNuxtApp()
+const api_url = 'https://echappee-copro.fr'
+const yt_api = 'https://www.youtube.com/embed/'
+const articles = await $fetch('https://echappee-copro.fr/articles').catch(
+  (error) => error.data,
+)
 
 useSeoMeta({
   title: () => articles[useRoute().params.id - 1].Titre,
@@ -116,5 +118,5 @@ useSeoMeta({
   ogDescription: () => articles[useRoute().params.id - 1].Description,
   ogImage: () =>
     api_url + articles[useRoute().params.id - 1].Media_contenu[0].url,
-});
+})
 </script>

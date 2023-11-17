@@ -15,6 +15,7 @@
           >
             <div class="video-responsive group">
               <iframe
+                lazy
                 class="object-cover object-center transition duration-200 group-hover:scale-110"
                 defer
                 :src="yt_api + video.URL + yt_nocookie"
@@ -38,7 +39,8 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-primary inline-flex items-center md:mb-2 lg:mb-0 hover:underline transition duration-300 hover:animate-pulse"
-                  >Voir la vidéo sur Youtube
+                >
+                  Voir la vidéo sur Youtube
                   <i class="ml-1 mdi mdi-youtube mdi-24px"></i>
                 </a>
               </div>
@@ -61,16 +63,15 @@
 export default {
   data() {
     return {
-      yt_api: "https://www.youtube-nocookie.com/embed/",
-      yt_nocookie: "?enablejsapi=1",
-      youtube_api: "https://www.youtube.com/watch?v=",
-    };
+      yt_api: 'https://www.youtube-nocookie.com/embed/',
+      yt_nocookie: '?enablejsapi=1',
+      youtube_api: 'https://www.youtube.com/watch?v=',
+    }
   },
-};
+}
 </script>
 <script setup>
-const playlists = await $fetch("https://echappee-copro.fr/playlists").catch(
-  (error) => error.data
-);
+const playlists = await $fetch('https://echappee-copro.fr/playlists').catch(
+  (error) => error.data,
+)
 </script>
-

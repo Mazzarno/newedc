@@ -12,8 +12,7 @@ export default defineNuxtConfig({
     "nuxt-swiper",
   ],
   delayHydration: {
-   mode: 'manual',
-  debug: process.env.NODE_ENV === 'development'
+    mode: "manual",
   },
   vite: { ssr: { noExternal: ["moment"] } },
   nitro: { preset: "netlify-edge" },
@@ -31,7 +30,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      titleTemplate: "L'Échappée des copropriétés - %s",
+      titleTemplate: "%s - L'Échappée des copropriétés",
       htmlAttrs: {
         lang: "fr",
       },

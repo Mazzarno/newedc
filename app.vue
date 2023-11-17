@@ -1,8 +1,8 @@
 <template>
   <div class="select-none">
-    <Loading v-show="loading" />
     <NuxtLayout></NuxtLayout>
     <RGPD />
+    <Loading v-show="loading" />
   </div>
 </template>
 

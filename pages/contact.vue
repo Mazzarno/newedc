@@ -17,9 +17,10 @@
           >
             <div class="p-2 w-1/2">
               <div class="relative">
-                <label for="name" class="leading-7 text-sm text-gray-600"
-                  >Nom</label
-                >
+                <label for="name" class="leading-7 text-sm text-gray-600">
+                  Nom
+                </label>
+
                 <input
                   type="text"
                   name="Nom"
@@ -32,9 +33,9 @@
             </div>
             <div class="p-2 w-1/2">
               <div class="relative">
-                <label for="email" class="leading-7 text-sm text-gray-600"
-                  >Email</label
-                >
+                <label for="email" class="leading-7 text-sm text-gray-600">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="Email"
@@ -48,9 +49,9 @@
 
             <div class="p-2 w-1/2">
               <div class="relative">
-                <label for="sujet" class="leading-7 text-sm text-gray-600"
-                  >Téléphone</label
-                >
+                <label for="sujet" class="leading-7 text-sm text-gray-600">
+                  Téléphone
+                </label>
                 <input
                   type="text"
                   name="Numéro_de_Téléphone"
@@ -64,9 +65,9 @@
 
             <div class="p-2 w-full">
               <div class="relative">
-                <label for="sujet" class="leading-7 text-sm text-gray-600"
-                  >Sujet</label
-                >
+                <label for="sujet" class="leading-7 text-sm text-gray-600">
+                  Sujet
+                </label>
                 <input
                   type="text"
                   name="Sujet"
@@ -81,9 +82,9 @@
 
             <div class="p-2 w-full">
               <div class="relative">
-                <label for="message" class="leading-7 text-sm text-gray-600"
-                  >Message</label
-                >
+                <label for="message" class="leading-7 text-sm text-gray-600">
+                  Message
+                </label>
                 <textarea
                   type="text"
                   name="message"
@@ -95,7 +96,7 @@
               </div>
             </div>
             <input type="hidden" name="_captcha" value="true" />
-            <input type="text" name="_honey" style="display: none" />
+            <input type="text" name="_honey" style="display: none;" />
             <input
               type="hidden"
               name="_next"
@@ -124,7 +125,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span class="mdi mdi-36px mdi-linkedin"> </span>
+                    <span class="mdi mdi-36px mdi-linkedin"></span>
                   </a>
                 </li>
                 <li>
@@ -134,7 +135,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span class="mdi mdi-36px mdi-facebook"> </span>
+                    <span class="mdi mdi-36px mdi-facebook"></span>
                   </a>
                 </li>
                 <li>
@@ -144,7 +145,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span class="mdi mdi-36px mdi-youtube"> </span>
+                    <span class="mdi mdi-36px mdi-youtube"></span>
                   </a>
                 </li>
               </ul>
@@ -155,19 +156,21 @@
     </div>
   </section>
 </template>
-
+<script setup>
+useHead({
+  title: 'Contact',
+});
+</script>
 <script>
 export default {
   data() {
     return {
       form: false,
       rules: {
-        name: [(val) => (val || "").length > 0 || "Ce champ est obligatoire"],
-        email: (v) => (v || "").match(/@/) || "Entrer une adresse email valide",
+        name: [(val) => (val || '').length > 0 || 'Ce champ est obligatoire'],
+        email: (v) => (v || '').match(/@/) || 'Entrer une adresse email valide',
       },
-    };
+    }
   },
-};
+}
 </script>
-
-<style></style>

@@ -429,9 +429,9 @@
   overflow-y: hidden;
   overflow: hidden;
   -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
 }
-.loading-page:-webkit-scrollbar {
+.loading-page::-webkit-scrollbar {
   display: none;
 }
 
@@ -453,6 +453,7 @@
   height: 100%;
   width: 6px;
   display: inline-block;
+  border-radius: 25px;
   -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
   animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }

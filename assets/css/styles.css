@@ -40,15 +40,7 @@ html {
       format("truetype"); /* Safari, Android, iOS */
   font-display: swap;
 }
-/* ANIMATION PAGE */
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 1s ease;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-}
+
 /* SCROLL BAR */
 ::-webkit-scrollbar {
   width: 7px;
@@ -61,6 +53,7 @@ html {
   background: #ff8c00;
   border-radius: 10px;
 }
+
 /* MENU BUTTON */
 
 .menu {

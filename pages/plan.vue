@@ -153,3 +153,8 @@
     </div>
   </div>
 </template>
+<script setup>
+useHead({
+  title: 'Plan du site',
+});
+</script>

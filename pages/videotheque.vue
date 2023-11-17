@@ -56,6 +56,9 @@
 const videos = await $fetch("https://echappee-copro.fr/videos").catch(
   (error) => error.data
 );
+useHead({
+  title: 'Vidéothèque',
+});
 </script>
 <script>
 export default {

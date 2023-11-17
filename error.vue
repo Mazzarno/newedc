@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-screen-lg px-4 md:px-8">
       <div class="grid gap-8 sm:grid-cols-2">
         <div
-          class="flex rounded-lg items-center justify-center bg-primary backdrop-blur-xl rounded drop-shadow-2xl opacity-95"
+          class="flex rounded-lg items-center justify-center bg-primary backdrop-blur-xl drop-shadow-2xl opacity-95"
         >
           <NuxtImg
             loading="lazy"
@@ -36,30 +36,34 @@
               <NuxtLink
                 to="/"
                 class="inline-block text-sm text-primary transition duration-100 hover:text-secondary active:text-indigo-700 md:text-base"
-                >Accueil</NuxtLink
               >
+                Accueil
+              </NuxtLink>
             </div>
 
             <div>
               <NuxtLink
                 to="/blog"
                 class="inline-block text-sm text-primary transition duration-100 hover:text-secondary active:text-indigo-700 md:text-base"
-                >Blog</NuxtLink
               >
+                Blog
+              </NuxtLink>
             </div>
             <div>
               <NuxtLink
                 to="/videotheque"
                 class="inline-block text-sm text-primary transition duration-100 hover:text-secondary active:text-indigo-700 md:text-base"
-                >Vidéothèque</NuxtLink
               >
+                Vidéothèque
+              </NuxtLink>
             </div>
             <div>
               <NuxtLink
-                to="contact"
+                to="/contact"
                 class="inline-block text-sm text-primary transition duration-100 hover:text-secondary active:text-indigo-700 md:text-base"
-                >Contact</NuxtLink
               >
+                Contact
+              </NuxtLink>
             </div>
             <ul class="inline-flex justify-center pt-4">
               <li>
@@ -69,7 +73,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span class="mdi mdi-36px mdi-linkedin"> </span>
+                  <span class="mdi mdi-36px mdi-linkedin"></span>
                 </a>
               </li>
               <li>
@@ -79,7 +83,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span class="mdi mdi-36px mdi-facebook"> </span>
+                  <span class="mdi mdi-36px mdi-facebook"></span>
                 </a>
               </li>
               <li>
@@ -89,7 +93,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span class="mdi mdi-36px mdi-youtube"> </span>
+                  <span class="mdi mdi-36px mdi-youtube"></span>
                 </a>
               </li>
             </ul>

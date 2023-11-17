@@ -112,7 +112,6 @@
         </div>
       </div>
     </nav>
-
     <DelayHydration>
       <!-- DRAWER -->
       <nav
@@ -194,7 +193,7 @@
       <!-- MAIN -->
       <main class="min-h-screen">
         <div class="pt-32 bg-white"></div>
-        <NuxtPage :key="$route.fullPath" />
+        <NuxtPage />
       </main>
 
       <!-- FOOTER -->

@@ -39,7 +39,6 @@
         </div>
       </div>
     </section>
-
     <!-- TOTEM 1 -->
     <section class="bg-white">
       <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
@@ -116,17 +115,19 @@
         </div>
       </div>
     </section>
-    <!-- Preview BLOG -->
-    <LazyPreviewBlog />
-    <!-- PARTENAIRE -->
-    <LazyPartenaireListe />
-    <!-- Preview Vidéothèque -->
-    <LazyPreviewVideo />
+    <DelayHydration>
+      <!-- Preview BLOG -->
+      <LazyPreviewBlog />
+      <!-- PARTENAIRE -->
+      <LazyPartenaireListe />
+      <!-- Preview Vidéothèque -->
+      <LazyPreviewVideo />
+    </DelayHydration>
   </div>
 </template>
 
 <script setup>
 useHead({
   title: 'Accueil',
-})
+});
 </script>

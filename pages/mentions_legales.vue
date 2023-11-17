@@ -100,3 +100,9 @@
     </div>
   </main>
 </template>
+
+<script setup>
+useHead({
+  title: 'Mentions Légales',
+});
+</script>

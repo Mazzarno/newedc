@@ -40,17 +40,19 @@
                 </p>
                 <div class="inline-flex items-center mb-3">
                   <p class="space-x-3">
-                    <small class="italic"
-                      >Publié le
+                    <small class="italic">
+                      Publié le
                       {{
-                        moment(article.Publication).locale("fr").format("LL")
-                      }}</small
-                    ><small class="italic">Ecrit par : </small>
+                        moment(article.Publication).locale('fr').format('LL')
+                      }}
+                    </small>
+
+                    <small class="italic">Ecrit par :</small>
                   </p>
                   <span class="flex-grow flex flex-col pl-2">
-                    <span class="text-gray-900 leading-relaxed italic">{{
-                      article.Auteur
-                    }}</span>
+                    <span class="text-gray-900 leading-relaxed italic">
+                      {{ article.Auteur }}
+                    </span>
                   </span>
                 </div>
               </div>
@@ -59,7 +61,8 @@
                   nuxt-link
                   :to="`/blog/articles/${article.id}`"
                   class="text-primary inline-flex items-center md:mb-2 lg:mb-0 hover:underline transition duration-300 hover:animate-pulse"
-                  >Voir l'article
+                >
+                  Voir l'article
                   <i class="ml-1 mdi mdi-arrow-right-thin mdi-24px"></i>
                 </NuxtLink>
               </div>
@@ -71,9 +74,12 @@
   </div>
 </template>
 <script setup lang="ts">
-import moment from "moment";
-import "moment/dist/locale/fr";
-const articles = await $fetch("https://echappee-copro.fr/articles").catch(
-  (error) => error.data
-);
+import moment from 'moment'
+import 'moment/dist/locale/fr'
+const articles = await $fetch('https://echappee-copro.fr/articles').catch(
+  (error) => error.data,
+)
+useHead({
+  title: 'Blog',
+})
 </script>
