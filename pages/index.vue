@@ -115,14 +115,12 @@
         </div>
       </div>
     </section>
-    <DelayHydration>
       <!-- Preview BLOG -->
       <LazyPreviewBlog />
       <!-- PARTENAIRE -->
       <LazyPartenaireListe />
       <!-- Preview Vidéothèque -->
       <LazyPreviewVideo />
-    </DelayHydration>
   </div>
 </template>
 

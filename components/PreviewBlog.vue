@@ -45,6 +45,7 @@
                   {{ article.Description }}
                 </p>
               </div>
+
               <div class="mt-auto flex items-end justify-between mb-3">
                 <div class="flex items-center gap-2">
                   <div
@@ -60,24 +61,17 @@
 
                   <div>
                     <span class="block text-primary">{{ article.Auteur }}</span>
-                    <span class="block text-sm text-gray-400">{{
-                      moment(article.Publication).locale("fr").format("LL")
-                    }}</span>
+                    <span class="block text-sm text-gray-400">
+                      {{
+                        moment(article.Publication).locale('fr').format('LL')
+                      }}
+                    </span>
                   </div>
                 </div>
 
-                <span class="rounded border px-2 py-1 text-sm text-gray-500"
-                  >Article</span
-                >
-              </div>
-              <div class="flex justify-self-end flex-wrap">
-                <NuxtLink
-                  nuxt-link
-                  :to="`/blog/articles/${article.id}`"
-                  class="text-primary inline-flex items-center md:mb-2 lg:mb-0 hover:underline transition duration-300 hover:animate-pulse"
-                  >Voir l'article
-                  <i class="ml-1 mdi mdi-arrow-right-thin mdi-24px"></i>
-                </NuxtLink>
+                <span class="rounded border px-2 py-1 text-sm text-gray-500">
+                  Article
+                </span>
               </div>
             </div>
           </div>
@@ -94,9 +88,9 @@
   </section>
 </template>
 <script setup>
-import moment from "moment";
-import "moment/dist/locale/fr";
-const categories = await $fetch("https://echappee-copro.fr/categories").catch(
-  (error) => error.data
-);
+import moment from 'moment'
+import 'moment/dist/locale/fr'
+const categories = await $fetch('https://echappee-copro.fr/categories').catch(
+  (error) => error.data,
+)
 </script>

@@ -4,16 +4,13 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
-    "nuxt-delay-hydration",
+
     "@nuxt/image",
     "nuxt-simple-robots",
     "nuxt-simple-sitemap",
     "nuxt-schema-org",
     "nuxt-swiper",
   ],
-  delayHydration: {
-    mode: "manual",
-  },
   vite: { ssr: { noExternal: ["moment"] } },
   nitro: { preset: "netlify-edge" },
   // nitro: { preset: "node" },
@@ -22,7 +19,7 @@ export default defineNuxtConfig({
     prefix: "Swiper",
     styleLang: "css",
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   css: ["~/assets/css/styles.css", "@mdi/font/css/materialdesignicons.min.css"],
   site: {
     url: "https://echappee-copro.org/",

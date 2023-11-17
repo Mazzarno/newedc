@@ -112,7 +112,6 @@
         </div>
       </div>
     </nav>
-    <DelayHydration>
       <!-- DRAWER -->
       <nav
         :class="openDrawer ? 'drawer-open' : 'drawer-close'"
@@ -189,7 +188,6 @@
           </span>
         </div>
       </nav>
-
       <!-- MAIN -->
       <main class="min-h-screen">
         <div class="pt-32 bg-white"></div>
@@ -198,7 +196,6 @@
 
       <!-- FOOTER -->
       <LazyFooter />
-    </DelayHydration>
   </div>
 </template>
 
