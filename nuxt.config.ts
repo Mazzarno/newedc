@@ -11,9 +11,9 @@ export default defineNuxtConfig({
     "nuxt-swiper",
   ],
   vite: { ssr: { noExternal: ["moment"] } },
-  nitro: { preset: "netlify-edge" },
+  nitro: { preset: "digital-ocean" },
   // nitro: { preset: "node" },
-  // nitro: { preset: "node-cluster" },
+  //  nitro: { preset: "netlify-edge" }, nitro: { preset: "node-cluster" },
   swiper: {
     prefix: "Swiper",
     styleLang: "css",
