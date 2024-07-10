@@ -48,6 +48,7 @@
           <ul
             class="flex flex-col mt-4 xl:flex-row xl:mt-0 md:border-0 xl:bg-transparent"
           >
+            <!-- 
             <li>
               <NuxtLink
                 to="/blog"
@@ -55,7 +56,7 @@
               >
                 Blog
               </NuxtLink>
-            </li>
+            </li>-->
             <li>
               <NuxtLink
                 to="/videotheque"
@@ -112,90 +113,91 @@
         </div>
       </div>
     </nav>
-      <!-- DRAWER -->
-      <nav
-        :class="openDrawer ? 'drawer-open' : 'drawer-close'"
-        class="drawer w-80 z-50 fixed bg-primary top-0 h-screen drop-shadow-2xl opacity-95"
+    <!-- DRAWER -->
+    <nav
+      :class="openDrawer ? 'drawer-open' : 'drawer-close'"
+      class="drawer w-80 z-50 fixed bg-primary top-0 h-screen drop-shadow-2xl opacity-95"
+    >
+      <div class="flex pr-2 justify-end">
+        <button @click="drawer()" class="p-2 text-white text-xl font-bold">
+          <i class="mdi mdi-close"></i>
+        </button>
+      </div>
+      <NuxtLink
+        class="transition delay-100 hover:scale-110 duration-300"
+        to="/"
       >
-        <div class="flex pr-2 justify-end">
-          <button @click="drawer()" class="p-2 text-white text-xl font-bold">
-            <i class="mdi mdi-close"></i>
-          </button>
-        </div>
-        <NuxtLink
-          class="transition delay-100 hover:scale-110 duration-300"
-          to="/"
-        >
-          <NuxtImg
-            loading="lazy"
-            src="/img/logo-nav.png"
-            class="h-24 items-center mx-auto"
-            alt="L'échappée des copropriétés logo"
-          />
-        </NuxtLink>
-        <div class="flex flex-col justify-around items-center h-5/6">
-          <ul class="list-none text-white">
-            <li class="my-8">
-              <NuxtLink class="text-white" to="/">
-                <span class="mdi mdi-home-outline mdi-24px text-white"></span>
-                <span class="ml-3 text-white">Accueil</span>
-              </NuxtLink>
-            </li>
-            <li class="my-8">
-              <NuxtLink class="text-white" to="/blog">
-                <span class="mdi mdi-border-color mdi-24px text-white"></span>
-                <span class="ml-3 text-white">Blog</span>
-              </NuxtLink>
-            </li>
-            <li class="my-8">
-              <NuxtLink class="" to="blog">
-                <span class="mdi mdi-video-outline mdi-24px text-white"></span>
-                <span class="ml-3 text-white">Vidéothèque</span>
-              </NuxtLink>
-            </li>
-            <li class="my-8">
-              <NuxtLink class="text-white" to="/contact">
-                <span class="mdi mdi-email-outline mdi-24px text-white"></span>
-                <span class="ml-3 text-white">Contact</span>
-              </NuxtLink>
-            </li>
-          </ul>
-          <span class="inline-flex justify-center">
-            <a
-              class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
-              href="https://www.linkedin.com/company/l-echappee-des-coproprietes?trk=public_profile_topcard_current_company"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="mdi mdi-24px mdi-linkedin"></span>
-            </a>
-            <a
-              class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
-              href="https://www.facebook.com/manon.leroy.7355"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="mdi mdi-24px mdi-facebook"></span>
-            </a>
-            <a
-              class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
-              href="https://www.youtube.com/channel/UCWxYK7EayDD5lYdjLSNW-lw"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="mdi mdi-24px mdi-youtube"></span>
-            </a>
-          </span>
-        </div>
-      </nav>
-      <!-- MAIN -->
-      <main class="min-h-screen">
-        <div class="pt-32 bg-white"></div>
-        <NuxtPage />
-      </main>
+        <NuxtImg
+          loading="lazy"
+          src="/img/logo-nav.png"
+          class="h-24 items-center mx-auto"
+          alt="L'échappée des copropriétés logo"
+        />
+      </NuxtLink>
+      <div class="flex flex-col justify-around items-center h-5/6">
+        <ul class="list-none text-white">
+          <li class="my-8">
+            <NuxtLink class="text-white" to="/">
+              <span class="mdi mdi-home-outline mdi-24px text-white"></span>
+              <span class="ml-3 text-white">Accueil</span>
+            </NuxtLink>
+          </li>
+          <!--
+          <li class="my-8">
+            <NuxtLink class="text-white" to="/blog">
+              <span class="mdi mdi-border-color mdi-24px text-white"></span>
+              <span class="ml-3 text-white">Blog</span>
+            </NuxtLink>
+          </li>-->
+          <li class="my-8">
+            <NuxtLink class="" to="/videotheque">
+              <span class="mdi mdi-video-outline mdi-24px text-white"></span>
+              <span class="ml-3 text-white">Vidéothèque</span>
+            </NuxtLink>
+          </li>
+          <li class="my-8">
+            <NuxtLink class="text-white" to="/contact">
+              <span class="mdi mdi-email-outline mdi-24px text-white"></span>
+              <span class="ml-3 text-white">Contact</span>
+            </NuxtLink>
+          </li>
+        </ul>
+        <span class="inline-flex justify-center">
+          <a
+            class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
+            href="https://www.linkedin.com/company/l-echappee-des-coproprietes?trk=public_profile_topcard_current_company"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="mdi mdi-24px mdi-linkedin"></span>
+          </a>
+          <a
+            class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
+            href="https://www.facebook.com/manon.leroy.7355"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="mdi mdi-24px mdi-facebook"></span>
+          </a>
+          <a
+            class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
+            href="https://www.youtube.com/channel/UCWxYK7EayDD5lYdjLSNW-lw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="mdi mdi-24px mdi-youtube"></span>
+          </a>
+        </span>
+      </div>
+    </nav>
+    <!-- MAIN -->
+    <main class="min-h-screen">
+      <div class="pt-32 bg-white"></div>
+      <NuxtPage />
+    </main>
 
-      <!-- FOOTER -->
-      <LazyFooter />
+    <!-- FOOTER -->
+    <LazyFooter />
   </div>
 </template>
 

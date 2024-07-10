@@ -115,17 +115,17 @@
         </div>
       </div>
     </section>
-      <!-- Preview BLOG -->
-      <LazyPreviewBlog />
-      <!-- PARTENAIRE -->
-      <LazyPartenaireListe />
-      <!-- Preview Vidéothèque -->
-      <LazyPreviewVideo />
+    <!-- Preview BLOG 
+      <LazyPreviewBlog />-->
+    <!-- PARTENAIRE -->
+    <LazyPartenaireListe />
+    <!-- Preview Vidéothèque -->
+    <LazyPreviewVideo />
   </div>
 </template>
 
 <script setup>
 useHead({
   title: 'Accueil',
-});
+})
 </script>

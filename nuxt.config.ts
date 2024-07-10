@@ -6,24 +6,35 @@ export default defineNuxtConfig({
     "@pinia-plugin-persistedstate/nuxt",
     "@nuxt/image",
     "nuxt-simple-robots",
-    "nuxt-simple-sitemap",
+    "@nuxtjs/sitemap",
     "nuxt-schema-org",
     "nuxt-swiper",
   ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   vite: { ssr: { noExternal: ["moment"] } },
-  nitro: { preset: "digital-ocean" },
+
   // nitro: { preset: "node" },
-  //  nitro: { preset: "netlify-edge" }, nitro: { preset: "node-cluster" },
+  nitro: { preset: "netlify-edge" },
+
+  //nitro: { preset: "node-cluster" },
   swiper: {
     prefix: "Swiper",
     styleLang: "css",
   },
+
   devtools: { enabled: false },
   css: ["~/assets/css/styles.css", "@mdi/font/css/materialdesignicons.min.css"],
+
   site: {
     url: "https://echappee-copro.org/",
     name: "L'Échappée des copropriétés",
   },
+
   app: {
     head: {
       titleTemplate: "%s - L'Échappée des copropriétés",
@@ -91,11 +102,13 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        { rel: "icon", type: "image/x-icon", href: "~/public/favicon.ico" },
+        { rel: "icon", type: "image/x-icon", href: "/public/favicon.ico" },
       ],
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
     },
   },
+
   plugins: [],
+  compatibilityDate: "2024-07-10",
 });

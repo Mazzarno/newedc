@@ -5,7 +5,7 @@
         <h1
           class="sm:text-3xl text-2xl font-medium title-font mb-4 text-primary"
         >
-          Nous contactez
+          Nous contacter
         </h1>
       </div>
       <div class="lg:w-1/2 md:w-2/3 mx-auto">
@@ -159,7 +159,7 @@
 <script setup>
 useHead({
   title: 'Contact',
-});
+})
 </script>
 <script>
 export default {

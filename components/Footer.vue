@@ -30,29 +30,33 @@
               <NuxtLink
                 to="/"
                 class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                >Accueil</NuxtLink
               >
+                Accueil
+              </NuxtLink>
             </li>
+            <!--
             <li>
               <NuxtLink
                 to="/blog"
                 class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
                 >Blog</NuxtLink
               >
-            </li>
+            </li>-->
             <li>
               <NuxtLink
                 to="/videotheque"
                 class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                >Vidéothèque</NuxtLink
               >
+                Vidéothèque
+              </NuxtLink>
             </li>
             <li>
               <NuxtLink
                 to="/contact"
                 class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                >Contact</NuxtLink
               >
+                Contact
+              </NuxtLink>
             </li>
           </nav>
         </div>
@@ -67,29 +71,33 @@
               <NuxtLink
                 to="/plan"
                 class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                >Plan du site</NuxtLink
               >
+                Plan du site
+              </NuxtLink>
             </li>
             <li>
               <NuxtLink
                 to="/mentions_legales"
                 class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                >Mentions Légales</NuxtLink
               >
+                Mentions Légales
+              </NuxtLink>
             </li>
             <li>
               <a
                 href="http://www.echappee-copro.org/sitemap.xml"
                 class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                >Sitemap</a
               >
+                Sitemap
+              </a>
             </li>
             <li>
               <a
                 href="http://www.echappee-copro.org/robots.txt"
                 class="text-white hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-                >Robots</a
               >
+                Robots
+              </a>
             </li>
           </nav>
         </div>
@@ -101,14 +109,7 @@
         class="bg-primary container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
       >
         <p class="text-white text-sm text-center sm:text-left">
-          © {{ new Date().getFullYear() }} ~ L'ÉCHAPPÉE DES COPROPRIÉTÉS —
-          <a
-            href="https://mazzar.fr"
-            rel="noopener noreferrer"
-            class="text-white ml-1 hover:text-grey-200 hover:underline hover:scale-105 duration-300 hover:animate-pulse"
-            target="_blank"
-            >@MazzaR</a
-          >
+          © {{ new Date().getFullYear() }} ~ L'ÉCHAPPÉE DES COPROPRIÉTÉS
         </p>
         <span class="inline-flex sm:ml-auto justify-center sm:justify-start">
           <a
@@ -117,7 +118,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="mdi mdi-24px mdi-linkedin"> </span>
+            <span class="mdi mdi-24px mdi-linkedin"></span>
           </a>
           <a
             class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
@@ -125,7 +126,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="mdi mdi-24px mdi-facebook"> </span>
+            <span class="mdi mdi-24px mdi-facebook"></span>
           </a>
           <a
             class="block px-2 transition hover:scale-125 duration-300 hover:animate-pulse text-white text-lg"
@@ -133,7 +134,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="mdi mdi-24px mdi-youtube"> </span>
+            <span class="mdi mdi-24px mdi-youtube"></span>
           </a>
         </span>
       </div>
