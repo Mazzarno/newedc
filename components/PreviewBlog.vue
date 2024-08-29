@@ -20,9 +20,7 @@
               nuxt-link
               :to="`/blog/articles/${article.id}`"
             >
-              <NuxtImg
-                format="webp"
-                loading="lazy"
+              <img
                 class="w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 :src="
                   'https://echappee-copro.fr' + article.Media_contenu[0].url
@@ -51,8 +49,7 @@
                   <div
                     class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100"
                   >
-                    <NuxtImg
-                      loading="lazy"
+                    <img
                       :src="'https://echappee-copro.fr' + article.Avatar[0].url"
                       :alt="article.Auteur"
                       class="h-full w-full object-cover object-center"

@@ -50,9 +50,8 @@
         class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6 justify-items-center md:justify-items-start"
       >
         <div class="w-full">
-          <NuxtImg
-            loading="lazy"
-            format="webp"
+          <img
+  
             class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last rounded-lg"
             src="/img/totem1.jpg"
             alt="Totem À l’échelle d’une Copropriété"
@@ -82,9 +81,7 @@
             Faciliter l’entraide et l’inspiration entre Copropriétés.
           </p>
         </div>
-        <NuxtImg
-          loading="lazy"
-          format="webp"
+        <img
           class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center rounded-lg"
           src="/img/totem4.jpg"
           alt="Totem Faciliter l’entraide et l’inspiration entre Copropriétés."
@@ -96,9 +93,7 @@
       <div
         class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 grid md:grid-cols-2 sm:py-16 lg:px-6 justify-items-center md:justify-items-start"
       >
-        <NuxtImg
-          format="webp"
-          loading="lazy"
+        <img
           class="w-1/2 object-cover self-center shadow-2xl transition delay-100 hover:scale-110 duration-300 items-center md:order-first order-last rounded-lg"
           src="/img/totem7.jpg"
           alt="Totem À l’échelle de l’écosystème de l’habitat privé"

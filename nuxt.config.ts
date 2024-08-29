@@ -17,9 +17,7 @@ export default defineNuxtConfig({
     },
   },
   vite: { ssr: { noExternal: ["moment"] } },
-  image: {
-    provider: "netlify",
-  },
+
   // nitro: { preset: "node" },
   nitro: { preset: "netlify-edge" },
 

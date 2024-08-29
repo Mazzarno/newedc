@@ -50,8 +50,7 @@
             <div
               class="flex h-[150px] w-[150px] items-center justify-center rounded-lg m-4"
             >
-              <NuxtImg
-                loading="lazy"
+              <img
                 class="h-[150px] w-[150px] object-cover transition delay-100 hover:scale-110 duration-300"
                 :src="partenaire.img"
                 :alt="partenaire.nom"

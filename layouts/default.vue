@@ -12,9 +12,8 @@
           class="flex items-center transition delay-100 hover:scale-105 duration-300"
           to="/"
         >
-          <NuxtImg
-            loading="lazy"
-            src="img/logo-nav.png"
+          <img
+            src="/img/logo-nav.png"
             class="h-24 mr-3"
             alt="L'échappée des copropriétés logo"
           />
